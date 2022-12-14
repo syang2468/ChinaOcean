@@ -1,0 +1,1074 @@
+{
+  "Dinner Combo" : [
+
+    {
+      "Name" : "Ma Po To Fu",
+      "Price" : 12.65,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Bar-B-Q Spare Ribs",
+      "Price" : 12.65,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Bar-B-Q Boneless Ribs",
+      "Price": 12.65,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Kung Pao Beef",
+      "Price" : 12.65,
+      "Lunch" : "Yes"
+    }
+
+  ],
+
+  "American Special"  : [
+
+    {
+      "Name"  : "Fried Chicken Wing (6)", 
+      "Price" : 7.99
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. Fried Rice",
+      "Price" : 9.99
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. French Fries",
+      "Price" : 9.99
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. Chicken Fried Rice",
+      "Price" : 11.59
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. Pork Fried Rice",
+      "Price" : 11.59
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. Shrimp Fried Rice",
+      "Price" : 13.59
+    },
+    
+    {
+      "Name"  : "Fried Chicken Wing (6) w. Beef Fried Rice",
+      "Price" : 13.59
+    },
+    
+    {
+      "Name"  : "French Fries",
+      "Price" : 3.99
+    },
+    
+    {
+      "Name"  : "Chicken Nugget (8)",
+      "Price" : 3.90
+    }
+
+  ],
+
+  "Appetizers" : [
+
+    {
+      "Name" : "Egg Roll (2) (Chicken)",
+      "Price" : 4.29
+    },
+
+    {
+      "Name" : "Spring Roll (2) (Shrimp)",
+      "Price" : 4.29
+    },
+
+    {
+      "Name" : "Spring Roll (2) (Vegetable Roll)",
+      "Price" : 4.29
+    },
+
+    {
+      "Name" : "Shrimp Toast (2)",
+      "Price" : 4.99
+    },
+
+    {
+      "Name" : "Fried Dumplings (6)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Steamed Dumplings (6)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Boneless Spare Ribs (6)",
+      "Price" : 9.99,
+      "Size" : "Yes - SL",
+      "Large" : 12.99
+    },
+
+    {
+      "Name" : "BBQ Spare Ribs",
+      "Price" : 10.99,
+      "Size" : "Yes - SL",
+      "Large" : 15.99
+    },
+
+    {
+      "Name" : "Beef on Stick (4)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Chicken on Stick (4)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Crab Rangoon (5) (Cream Cheese)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Fried Jumbo Shrimp (4)",
+      "Price" : 6.99
+    },
+
+    {
+      "Name" : "Pu Pu Platter",
+      "Price" : 13.99,
+      "Substitute" : "Yes - P"
+    },
+
+    {
+      "Name" : "Fried Wonton (6) (Pork)",
+      "Price" : 6.59
+    }
+
+  ],
+
+  "Soup" : [
+
+    {
+      "Name" : "Hot & Sour Soup",
+      "Price" : 3.59,
+      "Size" : "Yes - SL",
+      "Large" : 5.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Wonton Soup (Pork)",
+      "Price" : 3.59,
+      "Size" : "Yes - SL",
+      "Large" : 5.99
+    },
+
+    {
+      "Name" : "Egg Drop Soup",
+      "Price" : 3.59,
+      "Size" : "Yes - SL",
+      "Large" : 5.99
+    },
+
+    {
+      "Name" : "Wonton Egg Drop Soup",
+      "Price" : 3.59,
+      "Size" : "Yes - SL",
+      "Large" : 5.99
+    },
+
+    {
+      "Name" : "Seafood Soup",
+      "Price" : 8.99
+    },
+
+    {
+      "Name" : "Mixed Vegetable Soup",
+      "Price" : 7.99
+    },
+
+    {
+      "Name" : "House Special Soup",
+      "Price" : 8.99
+    },
+
+    {
+      "Name": "Chicken Noodle Soup",
+      "Price": 5.99,
+      "Size": "Yes - SL",
+      "Large": 7.29
+    }
+  ],
+
+  "Fried Rice" : [
+
+    {
+      "Name" : "Roast Pork Fried Rice",
+      "Price" : 10.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken Fried Rice",
+      "Price" : 10.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Vegetable Fried Rice",
+      "Price" : 10.99
+    },
+
+    {
+      "Name" : "Beef Fried Rice",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Shrimp Fried Rice",
+      "Price" : 11.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "House Special Fried Rice",
+      "Price" : 11.99,
+      "Subtitle" : "Chicken, roast pork & shrimp",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Seafood Fried Rice",
+      "Price" : 12.99
+    }
+
+  ],
+
+  "Chow Mein" : [
+
+    {
+      "Name" : "Roast Pork Chow Mein",
+      "Price" : 10.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken Chow Mein",
+      "Price" : 10.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Vegetable Chow Mein",
+      "Price" : 10.99
+    },
+
+    {
+      "Name" : "Beef Chow Mein",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Shrimp Chow Mein",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "House Special Chow Mein",
+      "Price" : 11.99,
+      "Subtitle" : "Chicken, roast pork & shrimp"
+    }
+
+  ],
+
+  "Lo Mein" : [
+
+    {
+      "Name" : "Roast Pork Lo Mein",
+      "Price" : 10.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken Lo Mein",
+      "Price" : 10.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Vegetable Lo Mein",
+      "Price" : 10.99
+    },
+
+    {
+      "Name" : "Beef Lo Mein",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Shrimp Lo Mein",
+      "Price" : 11.99,
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "House Special Lo Mein",
+      "Price" : 11.99,
+      "Subtitle" : "Chicken, roast pork & shrimp",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Seafood Lo Mein",
+      "Price" : 12.99
+    }
+
+  ],
+
+  "Chow Mai Fun" : [
+
+    {
+      "Name" : "Roast Pork Chow Mai Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Chicken Chow Mai Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Beef Chow Mai Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Shrimp Chow Mai Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "House Special Chow Mai Fun",
+      "Price" : 13.95,
+      "Subtitle" : "Chicken, roast pork & shrimp"
+    },
+
+    {
+      "Name" : "Singapore Chow Mai Fun",
+      "Price" : 13.99,
+      "Subtitle" : "w. Curry Sauce"
+    }
+
+  ],
+
+  "The Most Popular Thai Dishes" : [
+
+    {
+      "Name" : "Lemongrass Coconut Chicken Soup",
+      "Price" : 6.95
+    },
+
+    {
+      "Name" : "Lemongrass Coconut Shrimp Soup",
+      "Price" : 7.95
+    },
+
+    {
+      "Name" : "Tom Yum Chicken Soup",
+      "Price" : 6.95
+    },
+
+    {
+      "Name" : "Tom Yum Shrimp Soup",
+      "Price" : 7.95
+    },
+
+    {
+      "Name" : "Chicken Thai Fried Rice",
+      "Price" : 12.95
+    },
+
+    {
+      "Name" : "Tofu Thai Fried Rice",
+      "Price" : 12.95
+    },
+
+    {
+      "Name" : "Beef Thai Fried Rice",
+      "Price" : 14.95
+    },
+
+    {
+      "Name" : "Shrimp Thai Fried Rice",
+      "Price" : 14.95
+    },
+
+    {
+      "Name" : "Chicken Pad Thai",
+      "Price" : 12.95,
+      "Subtitle" : "Traditional Thai rice noodle wok-fried w. chicken, egg, ground peanuts, scallion and bean sprouts"
+    },
+
+    {
+      "Name" : "Beef Pad Thai",
+      "Price" : 14.95,
+      "Subtitle" : "Traditional Thai rice noodle wok-fried w. beef, egg, ground peanuts, scallion and bean sprouts"
+    },
+
+    {
+      "Name" : "Shrimp Pad Thai",
+      "Price" : 14.95,
+      "Subtitle" : "Traditional Thai rice noodle wok-fried w. shrimp, egg, ground peanuts, scallion and bean sprouts"
+    },
+
+    {
+      "Name" : "Tom Yum Noodle Soup w. Chicken",
+      "Price" : 9.95,
+      "Subtitle" : "A spicy lemongrass noodle soup with mushrooms, cilantro and bean sprouts served with rice vermicelli"
+    },
+
+    {
+      "Name" : "Tom Yum Noodle Soup w. Shrimp",
+      "Price" : 11.95,
+      "Subtitle" : "A spicy lemongrass noodle soup with mushrooms, cilantro and bean sprouts served with rice vermicelli"
+    }
+
+  ],
+
+  "Chow Fun" : [
+
+    {
+      "Name" : "Roast Pork Chow Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Chicken Chow Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "Beef Chow Fun",
+      "Price" : 11.99
+    },
+
+    {
+      "Name" : "House Special Chow Fun",
+      "Price" : 12.99,
+      "Subtitle" : "Chicken, roast pork & shrimp"
+    }
+  ],
+
+  "Chicken" : [
+
+    {
+      "Name" : "China Ocean Chicken",
+      "Price" : 13.99,
+      "Subtitle" : "Grilled chicken made with chef's specialty sauce with veggies"
+    },
+
+    {
+      "Name" : "Moo Goo Gai Pan",
+      "Price" : 12.59,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. Broccoli",
+      "Price" : 12.59,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. Snow Peas",
+      "Price" : 12.59
+    },
+
+    {
+      "Name" : "Chicken w. Mushrooms",
+      "Price" : 12.59
+    },
+
+    {
+      "Name" : "Chicken w. Cashew Nuts",
+      "Price" : 12.59,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Kung Pao Chicken",
+      "Price" : 12.59,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Curry Chicken",
+      "Price" : 12.59,
+      "Spicy" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Hunan Chicken",
+      "Price" : 12.59,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. String Beans in Garlic Sauce",
+      "Price" : 12.59,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Szechuan Chicken",
+      "Price" : 12.59,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. Garlic Sauce",
+      "Price" : 12.59,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Moo Shu Chicken",
+      "Price" : 12.59,
+      "Subtitle" : "(w. 4 pancakes)"
+    },
+
+    {
+      "Name" : "Sweet & Sour Chicken",
+      "Price" : 12.59,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. Mixed Vegetables",
+      "Price" : 12.59,
+      "Dinner" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken w. Black Bean Sauce",
+      "Price" : 12.59
+    }
+  ],
+
+  "Beef" : [
+
+    {
+      "Name" : "Beef w. Broccoli",
+      "Price" : 13.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Pepper Steak w. Onion",
+      "Price" : 13.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Curry Beef",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Hunan Beef",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Beef w. String Beans in Garlic Sauce",
+      "Price" : 13.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Szechuan Beef",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Beef w. Garlic Sauce",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Beef w. Mushrooms",
+      "Price" : 13.99
+    },
+
+    {
+      "Name" : "Beef w. Mixed Vegetables",
+      "Price" : 13.99,
+      "Dinner" : "Yes"
+    },
+
+    {
+      "Name" : "Moo Shu Beef",
+      "Price" : 13.99,
+      "Subtitle" : "(w. 4 pancakes)"
+    }
+
+  ],
+
+  "Seafood" : [
+
+    {
+      "Name" : "Shrimp w. Broccoli",
+      "Price" : 14.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp w. Mixed Vegetables",
+      "Price" : 14.99,
+      "Dinner" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp w. Cashew Nuts",
+      "Price" : 14.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp w. Black Bean Sauce",
+      "Price" : 14.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp with Lobster Sauce",
+      "Price" : 14.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Kung Pao Shrimp",
+      "Price" : 14.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Curry Shrimp",
+      "Price" : 14.99,
+      "Spicy" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Hunan Shrimp",
+      "Price" : 14.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp w. String Beans in Garlic Sauce",
+      "Price" : 14.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp w. Garlic Sauce",
+      "Price" : 14.99,
+      "Spicy" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Moo Shu Shrimp",
+      "Price" : 14.99,
+      "Subtitle" : "(w. 4 pancakes)"
+    },
+
+    {
+      "Name" : "Sweet & Sour Shrimp",
+      "Price" : 14.99
+    }
+
+  ],
+
+  "Pork" : [
+
+    {
+      "Name" : "Pork w. Broccoli",
+      "Price" : 12.99
+    },
+
+    {
+      "Name" : "Pork w. Mixed Vegetables",
+      "Price" : 12.99,
+      "Dinner" : "Yes"
+    },
+
+    {
+      "Name" : "Shredded Pork w. Black Bean Sauce",
+      "Price" : 12.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Shredded Pork w. Garlic Sauce",
+      "Price" : 12.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Moo Shu Pork",
+      "Price" : 12.99,
+      "Subtitle" : "(w. 4 pancakes)"
+    },
+
+    {
+      "Name" : "Sweet & Sour Pork",
+      "Price" : 12.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Double Cooked Pork",
+      "Price" : 12.99
+    }
+
+  ],
+
+  "Vegetables" : [
+
+    {
+      "Name" : "Kung Pao Tofu",
+      "Price" : 11.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Ma Po Bean Curd",
+      "Price" : 11.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Bean Curd Homestyle",
+      "Price" : 11.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Moo Shu Vegetable",
+      "Price" : 11.99,
+      "Subtitle" : "(w. 4 pancakes)"
+    },
+
+    {
+      "Name" : "Curry Tofu",
+      "Price" : 11.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "General Tso's Tofu",
+      "Price" : 12.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Sauteed String Bean",
+      "Price" : 12.99
+    },
+
+    {
+      "Name" : "Broccoli w. Garlic Sauce",
+      "Price" : 11.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Mixed Vegetable",
+      "Price" : 11.99,
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    }
+
+  ],
+
+  "Chef's Specialties" : [
+
+    {
+      "Name" : "Orange Chicken",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Subtitle" : "Fried chunks chicken sauteed w. garlic & orange peels in a special spicy sauce w. broccoli",
+      "Substitute" : "Yes - M"
+    },
+
+    {
+      "Name" : "General Tso's Chicken",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Subtitle" : "Fried chunks chicken, dried hot pepper & sauteed broccoli in special spicy sauce",
+      "Substitute" : "Yes - M",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Sesame Chicken",
+      "Price" : 13.99,
+      "Spicy" : "Yes",
+      "Subtitle" : "Fried chunk chicken dried sauteed then covered sesame seed & garnished w. broccoli",
+      "Substitute" : "Yes - M",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Lemon Chicken",
+      "Price" : 12.99
+    },
+
+    {
+      "Name" : "Mongolian Beef",
+      "Price" : 12.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Orange Flavor Beef",
+      "Price" : 14.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Hot & Spicy Shrimp",
+      "Price" : 15.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Beef, Shrimp & Chicken in Garlic Sauce",
+      "Price" : 15.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Triple Delight",
+      "Price" : 14.99
+    },
+
+    {
+      "Name" : "Dragon Meets Phoenix",
+      "Price" : 15.99,
+      "Spciy" : "Yes",
+      "Subtitle" : "Crispy shrimp sauteed salt & hot pepper on the side & chunk chicken deep fried to crispy sauteed sweet & sour sauce on the other side"
+    },
+
+    {
+      "Name" : "Shrimp & Scallop w. Garlic Sauce",
+      "Price" : 15.99,
+      "Spicy" : "Yes"
+    },
+
+    {
+      "Name" : "Happy Family",
+      "Price" : 15.99,
+      "Subtitle" : "Chunks of chicken, pork, beef & jumbo shrimp w. vegetables and lobster in brown sauce"
+    },
+
+    {
+      "Name" : "Seafood Delight",
+      "Price" : 15.99,
+      "Subtitle" : "Shrimp, crab meat, scallops, lobster meat w. mixed vegetable in white wine sauce"
+    },
+
+    {
+      "Name" : "Walnuts Shrimp",
+      "Price" : 15.99
+    },
+
+    {
+      "Name" : "General Tso's Shrimp",
+      "Price" : 15.99,
+      "Spicy" : "Yes"
+    }
+
+  ],
+
+  "Diet Menu" : [
+
+    {
+      "Name" : "Steamed Chicken w. Broccoli",
+      "Price" : 13.25
+    },
+
+    {
+      "Name" : "Steamed Chicken w. Mixed Vegetables",
+      "Price" : 13.25
+    },
+
+    {
+      "Name" : "Steamed Chicken Chow Mein",
+      "Price" : 13.25
+    },
+
+    {
+      "Name" : "Steamed Mixed Vegetables",
+      "Price" : 11.95
+    },
+
+    {
+      "Name" : "Steamed Chicken & Shrimp w. Mixed Vegetables",
+      "Price" : 15.99
+    },
+
+    {
+      "Name" : "Steamed Shrimp w. Mixed Vegetables",
+      "Price" : 15.99
+    }
+
+  ],
+
+  "Teriyaki" : [
+
+    {
+      "Name" : "Teriyaki Chicken w. Vegetables",
+      "Price" : 12.99
+    },
+
+    {
+      "Name" : "Teriyaki Beef with Vegetables",
+      "Price" : 14.99
+    },
+
+    {
+      "Name" : "Teriyaki Shrimp with Vegetables",
+      "Price" : 14.99
+    }
+
+  ],
+
+  "Egg Foo Young" : [
+
+    {
+      "Name" : "Roast Pork Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Chicken Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Beef Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes"
+    },
+
+    {
+      "Name" : "Shrimp Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes",
+      "Dinner" : "Yes",
+      "Lunch" : "Yes"
+    },
+
+    {
+      "Name" : "Vegetable Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes"
+    },
+
+    {
+      "Name" : "House Special Egg Foo Young",
+      "Price" : 12.59,
+      "Side" : "Yes",
+      "Subtitle" : "Chicken, roast pork & shrimp"
+    }
+
+  ],
+
+  "Side Order" : [
+
+    {
+      "Name" : "Steamed Rice",
+      "Price" : 2.95,
+      "Size" : "Yes - PQ",
+      "Quart" : 3.95
+    },
+
+    {
+      "Name" : "Brown Rice",
+      "Price" : 3.95,
+      "Size" : "Yes - PQ",
+      "Quart" : 4.95
+    },
+
+    {
+      "Name" : "Crispy Noodle (Each bag)",
+      "Price" : 1.00
+    },
+
+    {
+      "Name" : "Fortune Cookies (4)",
+      "Price" : 1.00
+    },
+
+    {
+      "Name" : "Soda",
+      "Price" : 1.15,
+      "Size" : "Yes - CB",
+      "20 oz." : 1.99
+    }
+
+  ]
+}

@@ -1,0 +1,105 @@
+[
+  {
+    "Name" : "Lunch Special",
+    "Subtitle" : "Served 11:00 am - 3:00 pm \n All Served with White Rice or Fried Rice",
+    "Side" : "SideOne",
+    "Price" : 9.65
+  },
+
+  {
+    "Name" : "Dinner Combo",
+    "Subtitle" : "All served with Rice or Fried Rice & Egg Roll \n (Substitute Chicken/Beef/Shrimp Fried Rice or Lo Mein Extra $2.00)",
+    "Side" : "SideTwo",
+    "Price" : "12.65"
+  },
+
+  {"Name" : "American Special"},
+
+  {"Name" : "Appetizers"},
+
+  {
+    "Name" : "Soup",
+    "Subtitle" : "(w. Crispy Noodle)"
+  },
+
+  {"Name" : "Fried Rice"},
+
+  {
+    "Name" : "Chow Mein",
+    "Subtitle" : "(not soft noodle) (w. White Rice and Crispy Noodle)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Lo Mein",
+    "Subtitle" : "(soft noodle)"
+  },
+
+  {
+    "Name" : "Chow Mai Fun",
+    "Subtitle" : "(Fine Rice Noodles)"
+  },
+
+  {"Name" : "The Most Popular Thai Dishes"},
+
+  {
+    "Name" : "Chow Fun",
+    "Subtitle" : "(Wide Rice Noodles)"
+  },
+
+  {
+    "Name" : "Chicken",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Beef",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Seafood",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Pork",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Vegetables",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Chef's Specialties",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Diet Menu",
+    "Subtitle" : "(No Oil, Sauce on the Side w. White Rice)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Teriyaki",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {
+    "Name" : "Egg Foo Young",
+    "Subtitle" : "(w. White Rice) (Substitute Fried Rice or Brown Rice Extra $1.50)",
+    "Side" : "Side1"
+  },
+
+  {"Name" : "Side Order"}
+]

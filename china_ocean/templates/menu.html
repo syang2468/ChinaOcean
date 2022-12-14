@@ -1,0 +1,194 @@
+{% extends "base_nav.html" %}
+{% load static %}
+
+{% block title %}
+    Menu
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="menu-sidebar">
+        <div class="row flex-nowrap">
+            <div class="container-fluid">
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+<!--                    data-bs-target="#collapsibleSideBar" aria-controls="collapsibleNavbar" aria-expanded="true"-->
+<!--                    aria-label="Toggle navigation">-->
+<!--                    <span class="navbar-toggler-icon"></span>-->
+<!--&lt;!&ndash;                    <i id="searchIcon" class="fa fa-bar"></i>&ndash;&gt;-->
+<!--                </button>-->
+
+                <br>
+                <ul id="collapsibleSideBar" class="menu-ul collapse show" style="list-style-type: none">
+                    {% for name in header %}
+                    <li class="menu-l"><a class="nav-link-menu" href="#{{ name }}"> {{ name }} </a></li> <br>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="row flex-nowrap">
+            <div class="container-fluid">
+                <h1 class="menu-heading"> Menu &nbsp </h1>
+                <br>
+
+                <div class="search">
+
+                    <input type="input" id="myInput" onkeyup="lookUp(this)" placeholder="Search an item.." style="width:100%">
+                    <!-- search icon -->
+                    <!-- <i id="searchIcon" class="fa fa-search"></i> -->
+                </div>
+
+                <br>
+                {% for name in header %}
+                    <h1 id="{{ name }}" class="text-center"> {{ name }} </h1>
+                    {% if name.sub %}
+                        <h6 class="text-center"> {{ name.sub | linebreaksbr }} </h6>
+                    {% endif %}
+
+                    {% if name.name == "Lunch Special" %}
+                        {% for item in lunch %}
+                            <div class="grid">
+                                <p class="left">
+                                    <!--L.--> {{ item.name }}
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </p>
+
+                                <p class="right">
+                                    {{ name.price }}
+                                </p>
+
+                                <p class="sub">
+                                </p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if name.name == "Dinner Combo" %}
+                        {% for item in dinner %}
+                            <div class="grid">
+                                <p class="left">
+                                    <!--D.--> {{ item.name }}
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </p>
+
+                                <p class="right">
+                                    {{ name.price }}
+                                </p>
+
+                                <p class="sub">
+                                </p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% for item in menu %}
+                        {% if item.header == name %}
+                            <div class="grid">
+                                <p class="left">
+                                    {{ item.name }}
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </p>
+
+                                <p class="right">
+                                    {% if item.large_price %}
+                                        (Sm.) {{ item.price }} (Lg.) {{ item.large_price }}
+                                    {% elif item.quart_price %}
+                                        (
+                                    {% else %}
+                                        {{ item.price }}
+                                    {% endif %}
+                                </p>
+
+                                <p class="sub">
+                                    {% if item.subtitle %}
+                                    <!--<p class="sub">--> {{ item.subtitle }} <!--</p>-->
+                                {% endif %}
+                                </p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <hr> <hr>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="row flex-nowrap">
+        <div class="container-fluid">
+            <button class="return-top">
+                <a href="#"> Top </a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function lookUp(searchBar) {
+        input = document.getElementById("myInput");
+        items = document.getElementsByClassName("left");
+        prices = document.getElementsByClassName("right");
+        sub = document.getElementsByClassName("sub");
+
+        //headers = document.getElementsByClassName("text-center");
+
+        //for (i = 0; i < headers.length; i++) {
+            //console.log(headers[i].nextElementSibling.nextElementSibling);
+        //}
+
+        let hasMatch = false;
+
+        filter = input.value.toUpperCase();
+
+        console.log("User input: " + filter);
+
+        let notfound = document.getElementsByClassName("notFound");
+
+        for (i = 0; i < items.length; i++) {
+            item_name = items[i].innerText;
+
+            //console.log(item_name);
+
+            if (item_name.toUpperCase().indexOf(filter) > -1) {
+                items[i].style.display = "";
+                prices[i].style.display = "";
+                sub[i].style.display = "";
+                hasMatch = true;
+            }
+            else {
+                items[i].style.display = "none";
+                prices[i].style.display = "none";
+                sub[i].style.display = "none";
+            }
+        }
+
+        if (!hasMatch && notfound.length == 0) {
+            var paragraph = document.createElement("p");
+            paragraph.className = "notFound";
+            var text = document.createTextNode("The item you are looking for is not available");
+
+            paragraph.appendChild(text);
+
+            searchBar.parentNode.insertBefore(paragraph, searchBar.nextSibling);
+        }
+        else if (hasMatch && searchBar.nextElementSibling) {
+            searchBar.nextElementSibling.style.display = "none";
+        }
+    }
+</script>
+
+{% endblock %}
