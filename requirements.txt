@@ -7,3 +7,6 @@ gunicorn
 # django-heroku is ONLY needed by Heroku for their internal process
 django-bootstrap-v5
 django-heroku
+
+#all-auth for google login
+django-allauth
