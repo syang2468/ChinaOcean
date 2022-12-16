@@ -20,4 +20,4 @@ channels==4.0.0
 daphne==4.0.0
 
 # for static files
-whitenoise==3.0
+whitenoise
