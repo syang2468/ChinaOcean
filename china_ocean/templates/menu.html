@@ -54,7 +54,7 @@
                         {% for item in lunch %}
                             <div class="grid">
                                 <p class="left">
-                                    <!--L.--> {{ item.name }}
+                                    {{ item.lunch_number }}. {{ item.name }}
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
                                     {% endif %}
@@ -74,14 +74,14 @@
                         {% for item in dinner %}
                             <div class="grid">
                                 <p class="left">
-                                    <!--D.--> {{ item.name }}
+                                    {{ item.dinner_number }}. {{ item.name }}
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
                                     {% endif %}
                                 </p>
 
                                 <p class="right">
-                                    {{ name.price }}
+                                     {{ name.price }}
                                 </p>
 
                                 <p class="sub">
@@ -94,7 +94,14 @@
                         {% if item.header == name %}
                             <div class="grid">
                                 <p class="left">
+                                    {% if item.dinner_number %}
+                                        {{ item.dinner_number }}.
+                                    {% else %}
+                                        {{ item.menu_number }}.
+                                    {% endif %}
+
                                     {{ item.name }}
+
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
                                     {% endif %}
@@ -146,6 +153,9 @@
         prices = document.getElementsByClassName("right");
         sub = document.getElementsByClassName("sub");
 
+        input = input.value.split('with').join('w.');
+        input = input.split('w/').join('w.');
+
         //headers = document.getElementsByClassName("text-center");
 
         //for (i = 0; i < headers.length; i++) {
@@ -154,7 +164,7 @@
 
         let hasMatch = false;
 
-        filter = input.value.toUpperCase();
+        filter = input.toUpperCase();
 
         console.log("User input: " + filter);
 

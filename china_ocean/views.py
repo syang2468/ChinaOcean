@@ -9,9 +9,9 @@ def menu(request):
 
     context = {
         "header": Header.objects.all(),
-        "menu": Item.objects.all(),
-        "lunch": Item.objects.filter(lunch="Yes"),
-        "dinner": Item.objects.filter(dinner="Yes")
+        "menu": Item.objects.filter(menu_number__isnull=False).order_by("number"),
+        "lunch": Item.objects.filter(lunch_number__isnull=False).order_by("combo_lunch_number"),
+        "dinner": Item.objects.filter(dinner_number__isnull=False).order_by("combo_lunch_number")
     }
 
     return render(request, template_name, context)
@@ -72,6 +72,16 @@ def menu_setup():
                         Item.objects.filter(name=item_name).update(bottle_price=menu_item.get("20 oz."))
                 if menu_item.get("Subtitle"):
                     Item.objects.filter(name=item_name).update(subtitle=menu_item.get("Subtitle"))
+                if menu_item.get("Menu_Number"):
+                    Item.objects.filter(name=item_name).update(menu_number=menu_item.get("Menu_Number"))
+                if menu_item.get("Lunch_Number"):
+                    Item.objects.filter(name=item_name).update(lunch_number=menu_item.get("Lunch_Number"))
+                if menu_item.get("Dinner_Number"):
+                    Item.objects.filter(name=item_name).update(dinner_number=menu_item.get("Dinner_Number"))
+                if menu_item.get("Number"):
+                    Item.objects.filter(name=item_name).update(number=menu_item.get("Number"))
+                if menu_item.get("Combo_Number"):
+                    Item.objects.filter(name=item_name).update(combo_lunch_number=menu_item.get("Combo_Number"))
 
 # header_setup()
 # menu_setup()

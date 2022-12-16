@@ -31,12 +31,16 @@ class Item(models.Model):
     quart_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     bottle_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     menu_number = models.CharField(max_length=6, null=True, blank=True)
+    lunch_number = models.CharField(max_length=6, null=True, blank=True)
+    dinner_number = models.CharField(max_length=6, null=True, blank=True)
     lunch = models.CharField(max_length=4, choices=YesNo.choices, default=YesNo.no)
     dinner = models.CharField(max_length=4, choices=YesNo.choices, default=YesNo.no)
     substitute = models.CharField(max_length=4, choices=YesNo.choices, default=YesNo.no, null=True, blank=True)
     size = models.CharField(max_length=10, choices=Size.choices, null=True, blank=True)
     header = models.ForeignKey(Header, on_delete=models.CASCADE)
     spicy = models.CharField(max_length=4, choices=YesNo.choices, null=True, blank=True)
+    number = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True)
+    combo_lunch_number = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True)
 
     def __str__(self):
         return self.name

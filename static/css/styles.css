@@ -33,7 +33,6 @@ body {
     word-spacing: -5px;
 }
 
-
 /* dropdown menu settings */
 .dropdown-menu {
     background: #84C8FF;
@@ -167,8 +166,14 @@ hr.menu {
     opacity: 100%;
 }
 
+/* Home page styling */
 .home_page {
     margin-left: 10px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
