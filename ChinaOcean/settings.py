@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-mffoz&s%t^m+ezu#7$*$wccn5kvi85w4fgz+k&de@-%vcoefw=
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "china-ocean.herokuapp.com"] #, "cs-3240-my-study-buddy.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "china-ocean.herokuapp.com", "www.chinaocean.com"] #, "cs-3240-my-study-buddy.herokuapp.com"]
 
 DEV_HOSTS = ['Sofias-MacBook-Pro.local']
 
