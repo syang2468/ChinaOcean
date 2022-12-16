@@ -471,13 +471,6 @@
   ],
 
   "Chicken" : [
-
-    {
-      "Name" : "China Ocean Chicken",
-      "Price" : 13.99,
-      "Subtitle" : "Grilled chicken made with chef's specialty sauce with veggies"
-    },
-
     {
       "Name" : "Moo Goo Gai Pan",
       "Price" : 12.59,

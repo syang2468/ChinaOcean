@@ -104,7 +104,9 @@
                                     {% if item.large_price %}
                                         (Sm.) {{ item.price }} (Lg.) {{ item.large_price }}
                                     {% elif item.quart_price %}
-                                        (
+                                        (Pt.) {{ item.price }} (Qt.) {{ item.quart_price }}
+                                    {% elif item.bottle_price %}
+                                        (Can) {{ item.price }} (20 oz.) {{ item.bottle_price }}
                                     {% else %}
                                         {{ item.price }}
                                     {% endif %}
