@@ -50,6 +50,8 @@
                         <h6 class="text-center"> {{ name.sub | linebreaksbr }} </h6>
                     {% endif %}
 
+                    <br>
+
                 <div class="menu-item-wrapper">
 
                     {% if name.name == "Lunch Special" %}
@@ -121,11 +123,11 @@
 
                                 <p class="price">
                                     {% if item.large_price %}
-                                        (Sm.) {{ item.price }} (Lg.) {{ item.large_price }}
+                                        (Sm.) {{ item.price }} <br> (Lg.) {{ item.large_price }}
                                     {% elif item.quart_price %}
-                                        (Pt.) {{ item.price }} (Qt.) {{ item.quart_price }}
+                                        (Pt.) {{ item.price }} <br> (Qt.) {{ item.quart_price }}
                                     {% elif item.bottle_price %}
-                                        (Can) {{ item.price }} (20 oz.) {{ item.bottle_price }}
+                                        (Can) {{ item.price }} <br> (20 oz.) {{ item.bottle_price }}
                                     {% else %}
                                         {{ item.price }}
                                     {% endif %}

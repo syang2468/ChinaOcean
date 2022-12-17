@@ -545,63 +545,72 @@
       "Name" : "Lemongrass Coconut Chicken Soup",
       "Price" : 6.95,
       "Menu_Number" : "40a",
-      "Number" : 58
+      "Number" : 58,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Lemongrass Coconut Shrimp Soup",
       "Price" : 7.95,
       "Menu_Number" : "40b",
-      "Number" : 59
+      "Number" : 59,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Tom Yum Chicken Soup",
       "Price" : 6.95,
       "Menu_Number" : "41a",
-      "Number" : 60
+      "Number" : 60,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Tom Yum Shrimp Soup",
       "Price" : 7.95,
       "Menu_Number" : "41b",
-      "Number" : 61
+      "Number" : 61,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Chicken Thai Fried Rice",
       "Price" : 12.95,
       "Menu_Number" : "42a",
-      "Number" : 62
+      "Number" : 62,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Pork Thai Fried Rice",
       "Price" : 12.95,
       "Menu_Number" : "42b",
-      "Number" : 63
+      "Number" : 63,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Tofu Thai Fried Rice",
       "Price" : 12.95,
       "Menu_Number" : "42c",
-      "Number" : 64
+      "Number" : 64,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Beef Thai Fried Rice",
       "Price" : 14.95,
       "Menu_Number" : "42d",
-      "Number" : 65
+      "Number" : 65,
+      "Spicy" : "Yes"
     },
 
     {
       "Name" : "Shrimp Thai Fried Rice",
       "Price" : 14.95,
       "Menu_Number" : "42e",
-      "Number" : 66
+      "Number" : 66,
+      "Spicy" : "Yes"
     },
 
     {
@@ -633,7 +642,8 @@
       "Price" : 9.95,
       "Subtitle" : "A spicy lemongrass noodle soup with mushrooms, cilantro and bean sprouts served with rice vermicelli",
       "Menu_Number" : "44a",
-      "Number" : 70
+      "Number" : 70,
+      "Spicy" : "Yes"
     },
 
     {
@@ -641,7 +651,8 @@
       "Price" : 11.95,
       "Subtitle" : "A spicy lemongrass noodle soup with mushrooms, cilantro and bean sprouts served with rice vermicelli",
       "Menu_Number" : "44b",
-      "Number" : 71
+      "Number" : 71,
+      "Spicy" : "Yes"
     }
 
   ],

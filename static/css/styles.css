@@ -128,7 +128,7 @@ body {
 .menu-item-wrapper {
     display: grid;
     /*grid-template-rows: auto; */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* flex-direction: column; */
     align-items: center;
     justify-content: center;
@@ -138,13 +138,10 @@ body {
 .menu-item-grid {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    grid-template-columns: 3fr 1fr;
-    margin-left: 10px;
-    margin-right: 10px;
+    grid-template-columns: 3fr 2fr;
+    margin: 10px;
     max-width: 250px;
-    max-height: 100px;
-    align-items: center;
-    justify-content: center;
+    max-height: 120px;
 }
 
 .name {
@@ -157,6 +154,8 @@ body {
 
 .sub2 {
     font-size: 13px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 /* search bar styling **/
