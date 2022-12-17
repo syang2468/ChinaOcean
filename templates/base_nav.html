@@ -43,6 +43,7 @@
                         <li class="nav-item" hidden="True"><a class="nav-link" href=""> About </a></li>
                         {% if user.is_staff %}
                             <li class="nav-item"><a class="nav-link" href="/admin/china_ocean/item/"> 更改菜单 </a></li>
+                            <!-- Maybe change it so there's a pen to edit that specific page? -->
                         {% endif %}
                         {% if user.is_authenticated %}
                             <li class="nav-item" hidden="True"><a class="nav-link" href=""> My Orders </a></li>

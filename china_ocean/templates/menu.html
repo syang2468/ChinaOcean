@@ -50,50 +50,62 @@
                         <h6 class="text-center"> {{ name.sub | linebreaksbr }} </h6>
                     {% endif %}
 
+                <div class="menu-item-wrapper">
+
                     {% if name.name == "Lunch Special" %}
-                        {% for item in lunch %}
-                            <div class="grid">
-                                <p class="left">
-                                    {{ item.lunch_number }}. {{ item.name }}
-                                    {% if item.spicy %}
-                                        &nbsp &#x1f336;
+<!--                        <div class="menu-item-wrapper">-->
+                            {% for item in lunch %}
+                                <div class="menu-item-grid">
+                                    <p class="name">
+                                        {{ item.lunch_number }}. {{ item.name }}
+                                        {% if item.spicy %}
+                                            &nbsp &#x1f336;
+                                        {% endif %}
+                                    </p>
+
+                                    <p class="price">
+                                        {{ name.price }}
+                                    </p>
+
+                                    {% if item.subtitle %}
+                                        <p class="sub2">
+                                            {{ item.subtitle }}
+                                        </p>
                                     {% endif %}
-                                </p>
-
-                                <p class="right">
-                                    {{ name.price }}
-                                </p>
-
-                                <p class="sub">
-                                </p>
-                            </div>
-                        {% endfor %}
+                                </div>
+                            {% endfor %}
+<!--                        </div>-->
                     {% endif %}
 
                     {% if name.name == "Dinner Combo" %}
                         {% for item in dinner %}
-                            <div class="grid">
-                                <p class="left">
+                            <div class="menu-item-grid">
+                                <p class="name">
                                     {{ item.dinner_number }}. {{ item.name }}
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
                                     {% endif %}
                                 </p>
 
-                                <p class="right">
-                                     {{ name.price }}
+                                <p class="price">
+                                    {{ name.price }}
                                 </p>
 
-                                <p class="sub">
-                                </p>
+                                <!-- <hr> -->
+
+                                {% if item.subtitle %}
+                                    <p class="sub2">
+                                        {{ item.subtitle }}
+                                    </p>
+                                {% endif %}
                             </div>
                         {% endfor %}
                     {% endif %}
 
                     {% for item in menu %}
                         {% if item.header == name %}
-                            <div class="grid">
-                                <p class="left">
+                            <div class="menu-item-grid">
+                                <p class="name">
                                     {% if item.dinner_number %}
                                         {{ item.dinner_number }}.
                                     {% else %}
@@ -107,7 +119,7 @@
                                     {% endif %}
                                 </p>
 
-                                <p class="right">
+                                <p class="price">
                                     {% if item.large_price %}
                                         (Sm.) {{ item.price }} (Lg.) {{ item.large_price }}
                                     {% elif item.quart_price %}
@@ -119,16 +131,18 @@
                                     {% endif %}
                                 </p>
 
-                                <p class="sub">
-                                    {% if item.subtitle %}
-                                    <!--<p class="sub">--> {{ item.subtitle }} <!--</p>-->
+                                {% if item.subtitle %}
+                                    <p class="sub2">
+                                        <!--<p class="sub">--> {{ item.subtitle }} <!--</p>-->
+                                    </p>
                                 {% endif %}
-                                </p>
+
                             </div>
                         {% endif %}
                     {% endfor %}
+                </div>
 
-                    <hr> <hr>
+                <hr> <hr>
 
                 {% endfor %}
             </div>
@@ -155,6 +169,10 @@
 
         input = input.value.split('with').join('w.');
         input = input.split('w/').join('w.');
+
+        input = input.split('veggies').join('vegetable');
+        input = input.split('veggie').join('vegetable');
+        input = input.split('vegg').join('vegetable');
 
         //headers = document.getElementsByClassName("text-center");
 
