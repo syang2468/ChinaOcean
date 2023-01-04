@@ -13,13 +13,6 @@
 
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
-<!--                    data-bs-target="#collapsibleSideBar" aria-controls="collapsibleNavbar" aria-expanded="true"-->
-<!--                    aria-label="Toggle navigation">-->
-<!--                    <span class="navbar-toggler-icon"></span>-->
-<!--&lt;!&ndash;                    <i id="searchIcon" class="fa fa-bar"></i>&ndash;&gt;-->
-<!--                </button>-->
-
                 <br>
                 <ul id="collapsibleSideBar" class="menu-ul collapse show" style="list-style-type: none">
                     {% for name in header %}
@@ -55,34 +48,36 @@
                 <div class="menu-item-wrapper">
 
                     {% if name.name == "Lunch Special" %}
-<!--                        <div class="menu-item-wrapper">-->
-                            {% for item in lunch %}
-                                <div class="menu-item-grid">
-                                    <p class="name">
-                                        {{ item.lunch_number }}. {{ item.name }}
-                                        {% if item.spicy %}
-                                            &nbsp &#x1f336;
-                                        {% endif %}
-                                    </p>
-
-                                    <p class="price">
-                                        {{ name.price }}
-                                    </p>
-
-                                    {% if item.subtitle %}
-                                        <p class="sub2">
-                                            {{ item.subtitle }}
-                                        </p>
+                        {% for item in lunch %}
+                            <div class="menu-item-grid">
+                                <p class="name">
+                                    {{ item.lunch_number }}. {{ item.name }}
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
                                     {% endif %}
-                                </div>
-                            {% endfor %}
-<!--                        </div>-->
+
+<!--                                    <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p>-->
+                                </p>
+
+                                <p class="price">
+                                    {{ name.price }}
+                                </p>
+
+                                <p class="sub2">
+                                    {% if item.subtitle %}
+                                        {{ item.subtitle }}
+                                    {% endif %}
+                                </p>
+
+                            </div>
+                        {% endfor %}
                     {% endif %}
 
                     {% if name.name == "Dinner Combo" %}
                         {% for item in dinner %}
                             <div class="menu-item-grid">
                                 <p class="name">
+                                    <!-- {% block edit_order2 %} {% endblock %} -->
                                     {{ item.dinner_number }}. {{ item.name }}
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
@@ -95,11 +90,11 @@
 
                                 <!-- <hr> -->
 
-                                {% if item.subtitle %}
-                                    <p class="sub2">
+                                <p class="sub2">
+                                    {% if item.subtitle %}
                                         {{ item.subtitle }}
-                                    </p>
-                                {% endif %}
+                                    {% endif %}
+                                </p>
                             </div>
                         {% endfor %}
                     {% endif %}
@@ -108,6 +103,7 @@
                         {% if item.header == name %}
                             <div class="menu-item-grid">
                                 <p class="name">
+                                    <!-- {% block edit_order3 %} {% endblock %} -->
                                     {% if item.dinner_number %}
                                         {{ item.dinner_number }}.
                                     {% else %}
@@ -133,11 +129,11 @@
                                     {% endif %}
                                 </p>
 
-                                {% if item.subtitle %}
-                                    <p class="sub2">
+                                <p class="sub2">
+                                    {% if item.subtitle %}
                                         <!--<p class="sub">--> {{ item.subtitle }} <!--</p>-->
-                                    </p>
-                                {% endif %}
+                                    {% endif %}
+                                </p>
 
                             </div>
                         {% endif %}
@@ -165,9 +161,9 @@
 <script>
     function lookUp(searchBar) {
         input = document.getElementById("myInput");
-        items = document.getElementsByClassName("left");
-        prices = document.getElementsByClassName("right");
-        sub = document.getElementsByClassName("sub");
+        items = document.getElementsByClassName("name");
+        prices = document.getElementsByClassName("price");
+        sub = document.getElementsByClassName("sub2");
 
         input = input.value.split('with').join('w.');
         input = input.split('w/').join('w.');
@@ -195,6 +191,8 @@
 
             //console.log(item_name);
 
+            //console.log("here: " + item_name.toUpperCase().indexOf(filter));
+
             if (item_name.toUpperCase().indexOf(filter) > -1) {
                 items[i].style.display = "";
                 prices[i].style.display = "";
@@ -203,8 +201,11 @@
             }
             else {
                 items[i].style.display = "none";
+                //items[i].style.maxHeight = "0px";
                 prices[i].style.display = "none";
+                //prices[i].style.maxHeight = "0px";
                 sub[i].style.display = "none";
+                //sub[i].style.maxHeight = "0px";
             }
         }
 

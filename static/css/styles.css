@@ -128,7 +128,7 @@ body {
 .menu-item-wrapper {
     display: grid;
     /*grid-template-rows: auto; */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     /* flex-direction: column; */
     align-items: center;
     justify-content: center;
@@ -138,7 +138,7 @@ body {
 .menu-item-grid {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    grid-template-columns: 3fr 2fr;
+    /* grid-template-columns: 4fr 2fr; */
     margin: 10px;
     max-width: 250px;
     max-height: 120px;
@@ -146,6 +146,12 @@ body {
 
 .name {
 
+}
+
+.edit_order {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .price {
@@ -209,6 +215,35 @@ hr.menu {
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.gallery {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-left: 10px;
+    padding-top: 10px;
+    /*grid-auto-rows: 8px;*/
+}
+
+.gallery img:hover {
+    box-shadow: 0 0 32px #333;
+}
+
+.gallery .gallery-item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery .gallery-item:hover {
+    transform: scale(1.025);
+}
+
+.gallery .content {
+    padding: 4px;
 }
 
 

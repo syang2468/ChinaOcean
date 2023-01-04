@@ -5,7 +5,7 @@ from .models import Header, Item
 
 # Create your views here.
 def menu(request):
-    template_name = 'menu.html'
+    template_name = 'base-menu.html'
 
     context = {
         "header": Header.objects.all(),
@@ -15,6 +15,12 @@ def menu(request):
     }
 
     return render(request, template_name, context)
+
+
+def edit_menu(request):
+    template_name = 'edit-menu.html'
+
+    return render(request, template_name)
 
 
 def header_setup():
