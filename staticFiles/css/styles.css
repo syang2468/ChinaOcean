@@ -1,4 +1,4 @@
-body {
+html, body {
     background: #4dafff;
     font-family: 'Patrick Hand', sans-serif;
     height: 100%;
@@ -33,7 +33,6 @@ body {
     word-spacing: -5px;
 }
 
-
 /* dropdown menu settings */
 .dropdown-menu {
     background: #84C8FF;
@@ -56,7 +55,7 @@ body {
 
 .menu-heading {
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     letter-spacing: 2.5px;
     text-decoration-style: wavy;
     text-decoration-line: underline;
@@ -97,7 +96,7 @@ body {
     word-wrap: break-word;
 }
 
-/* Styling for actual menu content */
+/* Styling for whole menu content */
 .menu {
     width: 80%;
     margin: auto;
@@ -125,6 +124,48 @@ body {
     margin-top: -15px;
 }
 
+/* menu item layout styling */
+.menu-item-wrapper {
+    display: grid;
+    /*grid-template-rows: auto; */
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+/* menu item box styling */
+.menu-item-grid {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    /* grid-template-columns: 4fr 2fr; */
+    margin: 10px;
+    max-width: 250px;
+    max-height: 120px;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.edit_order {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.price {
+    text-align: right;
+    font-size: 20px;
+}
+
+.sub2 {
+    font-size: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* search bar styling **/
 .search {
     padding-left: 25px;
     padding-right: 10px;
@@ -165,6 +206,49 @@ hr.menu {
 
 .return-top:hover {
     opacity: 100%;
+}
+
+/* Home page styling */
+.home_page {
+    margin-left: 10px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gallery {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+    padding-left: 10px;
+    padding-top: 10px;
+    /*grid-auto-rows: 8px;*/
+}
+
+.gallery img {
+    text-align: center;
+}
+
+.gallery img:hover {
+    box-shadow: 0 0 32px #333;
+}
+
+.gallery .gallery-item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery .gallery-item:hover {
+    transform: scale(1.025);
+}
+
+.gallery .content {
+    padding: 4px;
 }
 
 

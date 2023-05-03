@@ -66,6 +66,8 @@
                                 <p class="sub2">
                                     {% if item.subtitle %}
                                         {{ item.subtitle }}
+                                    {% else %}
+                                    <!-- <img stlye="text-align: center" src="{% static 'dishes/honey-chicken.png' %}" alt="" width="90px" height="90px"> -->
                                     {% endif %}
                                 </p>
 
@@ -158,6 +160,9 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block script %}
 <script>
     function lookUp(searchBar) {
         input = document.getElementById("myInput");

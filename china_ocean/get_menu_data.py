@@ -1,5 +1,5 @@
 import json
-from china_ocean.models import Item
+# from china_ocean.models import Item
 
 
 def initial_menu_setup():
@@ -24,7 +24,8 @@ def header_setup():
     for header in data:
         print(header)
 
-        china_ocean.Header.objects.create(name = header)
+        # china_ocean.Header.objects.create(name = header)
 
 
-initial_menu_setup()
+# initial_menu_setup()
+header_setup()
