@@ -22,6 +22,11 @@ def edit_menu(request):
 
     return render(request, template_name)
 
+def other(request):
+    template_name = 'other.html'
+
+    return render(request, template_name)
+
 
 def header_setup():
     with open('Menu/headers.json') as data_file:

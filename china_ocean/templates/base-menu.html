@@ -14,6 +14,13 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                 <br>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleSideBar" aria-controls="collapsibleNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <ul id="collapsibleSideBar" class="menu-ul collapse show" style="list-style-type: none">
                     {% for name in header %}
                     <li class="menu-l"><a class="nav-link-menu" href="#{{ name }}"> {{ name }} </a></li> <br>
@@ -24,7 +31,7 @@
     </div>
 
     <div class="menu">
-        <div class="row flex-nowrap">
+        <!-- <div class="row flex-nowrap"> -->
             <div class="container-fluid">
                 <h1 class="menu-heading"> Menu &nbsp </h1>
                 <br>
@@ -45,18 +52,18 @@
 
                     <br>
 
-                <div class="menu-item-wrapper">
+                <div class="menu-item-container">
 
                     {% if name.name == "Lunch Special" %}
                         {% for item in lunch %}
-                            <div class="menu-item-grid">
+                            <div class="menu-item">
                                 <p class="name">
                                     {{ item.lunch_number }}. {{ item.name }}
                                     {% if item.spicy %}
                                         &nbsp &#x1f336;
                                     {% endif %}
 
-<!--                                    <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p>-->
+                                   <!-- <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p> -->
                                 </p>
 
                                 <p class="price">
@@ -67,6 +74,7 @@
                                     {% if item.subtitle %}
                                         {{ item.subtitle }}
                                     {% else %}
+                                    <!-- <i class="fa-solid fa-eye"></i> -->
                                     <!-- <img stlye="text-align: center" src="{% static 'dishes/honey-chicken.png' %}" alt="" width="90px" height="90px"> -->
                                     {% endif %}
                                 </p>
@@ -77,7 +85,7 @@
 
                     {% if name.name == "Dinner Combo" %}
                         {% for item in dinner %}
-                            <div class="menu-item-grid">
+                            <div class="menu-item">
                                 <p class="name">
                                     <!-- {% block edit_order2 %} {% endblock %} -->
                                     {{ item.dinner_number }}. {{ item.name }}
@@ -103,7 +111,7 @@
 
                     {% for item in menu %}
                         {% if item.header == name %}
-                            <div class="menu-item-grid">
+                            <div class="menu-item">
                                 <p class="name">
                                     <!-- {% block edit_order3 %} {% endblock %} -->
                                     {% if item.dinner_number %}
@@ -146,7 +154,7 @@
 
                 {% endfor %}
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </div>
 

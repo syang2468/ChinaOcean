@@ -17,7 +17,7 @@ from ChinaOcean import views
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth.views import LogoutView
-from china_ocean.views import menu, edit_menu
+from china_ocean.views import menu, edit_menu, other
 
 # handler404 = views.handler404
 # handler500 = 'my_app.views.handler500'
@@ -29,4 +29,5 @@ urlpatterns = [
     path('menu/edit', edit_menu, name="edit"),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view(), name='logout'),
+    path('other', other, name="other")
 ]
