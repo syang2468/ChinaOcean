@@ -122,8 +122,8 @@ def add_image():
         
         print(image_url)
 
+        # check if images are available, if so update the corresponding field
         if os.path.isfile("/Users/sofiayang/ChinaOcean" + image_url):
-            print("*********************here: " + image_url)
             Item.objects.filter(name=item.name).update(image_url = image_url)
         if os.path.isfile("/Users/sofiayang/ChinaOcean" + dinner_name):
             Item.objects.filter(name=item.name).update(dinner_image_url = dinner_name)
