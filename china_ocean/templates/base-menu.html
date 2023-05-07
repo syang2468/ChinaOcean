@@ -14,12 +14,12 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                 <br>
-
+<!-- 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleSideBar" aria-controls="collapsibleNavbar" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <ul id="collapsibleSideBar" class="menu-ul collapse show" style="list-style-type: none">
                     {% for name in header %}
@@ -31,130 +31,128 @@
     </div>
 
     <div class="menu">
-        <!-- <div class="row flex-nowrap"> -->
-            <div class="container-fluid">
-                <h1 class="menu-heading"> Menu &nbsp </h1>
+        <div class="container-fluid">
+            <h1 class="menu-heading"> Menu </h1>
+            <br>
+
+            <div class="search">
+
+                <input type="input" id="myInput" onkeyup="lookUp(this)" placeholder="Search an item.." style="width:100%">
+                <!-- search icon -->
+                <!-- <i id="searchIcon" class="fa fa-search"></i> -->
+            </div>
+
+            <br>
+            {% for name in header %}
+                <h1 id="{{ name }}" class="text-center"> {{ name }} </h1>
+                {% if name.sub %}
+                    <h6 class="text-center"> {{ name.sub | linebreaksbr }} </h6>
+                {% endif %}
+
                 <br>
 
-                <div class="search">
+            <div class="menu-item-container">
 
-                    <input type="input" id="myInput" onkeyup="lookUp(this)" placeholder="Search an item.." style="width:100%">
-                    <!-- search icon -->
-                    <!-- <i id="searchIcon" class="fa fa-search"></i> -->
-                </div>
-
-                <br>
-                {% for name in header %}
-                    <h1 id="{{ name }}" class="text-center"> {{ name }} </h1>
-                    {% if name.sub %}
-                        <h6 class="text-center"> {{ name.sub | linebreaksbr }} </h6>
-                    {% endif %}
-
-                    <br>
-
-                <div class="menu-item-container">
-
-                    {% if name.name == "Lunch Special" %}
-                        {% for item in lunch %}
-                            <div class="menu-item">
-                                <p class="name">
-                                    {{ item.lunch_number }}. {{ item.name }}
-                                    {% if item.spicy %}
-                                        &nbsp &#x1f336;
-                                    {% endif %}
-
-                                   <!-- <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p> -->
-                                </p>
-
-                                <p class="price">
-                                    {{ name.price }}
-                                </p>
-
-                                <p class="sub2">
-                                    {% if item.subtitle %}
-                                        {{ item.subtitle }}
-                                    {% else %}
+                {% if name.name == "Lunch Special" %}
+                    {% for item in lunch %}
+                        <div class="menu-item">
+                            <p class="sub2">
+                                <!-- {% if item.subtitle %} -->
+                                    <!-- {{ item.subtitle |linebreaksbr }} -->
+                                <!-- {% else %} -->
                                     <!-- <i class="fa-solid fa-eye"></i> -->
-                                    <!-- <img stlye="text-align: center" src="{% static 'dishes/honey-chicken.png' %}" alt="" width="90px" height="90px"> -->
-                                    {% endif %}
-                                </p>
+                                    <!-- <img class="menu-item-image" src="{% static 'dishes/honey-chicken.png' %}" alt=""> -->
+                                <!-- {% endif %} -->
+                            </p>
 
-                            </div>
-                        {% endfor %}
-                    {% endif %}
+                            <p class="name">
+                                {{ item.lunch_number }}. {{ item.name }}
+                                {% if item.spicy %}
+                                    &nbsp &#x1f336;
+                                {% endif %}
 
-                    {% if name.name == "Dinner Combo" %}
-                        {% for item in dinner %}
-                            <div class="menu-item">
-                                <p class="name">
-                                    <!-- {% block edit_order2 %} {% endblock %} -->
-                                    {{ item.dinner_number }}. {{ item.name }}
-                                    {% if item.spicy %}
-                                        &nbsp &#x1f336;
-                                    {% endif %}
-                                </p>
+                               <!-- <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p> -->
+                            </p>
 
-                                <p class="price">
-                                    {{ name.price }}
-                                </p>
+                            <p class="price">
+                                {{ name.price }}
+                            </p>
 
-                                <!-- <hr> -->
-
-                                <p class="sub2">
-                                    {% if item.subtitle %}
-                                        {{ item.subtitle }}
-                                    {% endif %}
-                                </p>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-
-                    {% for item in menu %}
-                        {% if item.header == name %}
-                            <div class="menu-item">
-                                <p class="name">
-                                    <!-- {% block edit_order3 %} {% endblock %} -->
-                                    {% if item.dinner_number %}
-                                        {{ item.dinner_number }}.
-                                    {% else %}
-                                        {{ item.menu_number }}.
-                                    {% endif %}
-
-                                    {{ item.name }}
-
-                                    {% if item.spicy %}
-                                        &nbsp &#x1f336;
-                                    {% endif %}
-                                </p>
-
-                                <p class="price">
-                                    {% if item.large_price %}
-                                        (Sm.) {{ item.price }} <br> (Lg.) {{ item.large_price }}
-                                    {% elif item.quart_price %}
-                                        (Pt.) {{ item.price }} <br> (Qt.) {{ item.quart_price }}
-                                    {% elif item.bottle_price %}
-                                        (Can) {{ item.price }} <br> (20 oz.) {{ item.bottle_price }}
-                                    {% else %}
-                                        {{ item.price }}
-                                    {% endif %}
-                                </p>
-
-                                <p class="sub2">
-                                    {% if item.subtitle %}
-                                        <!--<p class="sub">--> {{ item.subtitle }} <!--</p>-->
-                                    {% endif %}
-                                </p>
-
-                            </div>
-                        {% endif %}
+                        </div>
                     {% endfor %}
-                </div>
+                {% endif %}
 
-                <hr> <hr>
+                {% if name.name == "Dinner Combo" %}
+                    {% for item in dinner %}
+                        <div class="menu-item">
+                            <p class="sub2">
+                                <!-- {% if item.subtitle %} -->
+                                    <!-- {{ item.subtitle | linebreaksbr }} -->
+                                <!-- {% endif %} -->
+                            </p>
 
+                            <p class="name">
+                                <!-- {% block edit_order2 %} {% endblock %} -->
+                                {{ item.dinner_number }}. {{ item.name }}
+                                {% if item.spicy %}
+                                    &nbsp &#x1f336;
+                                {% endif %}
+                            </p>
+
+                            <p class="price">
+                                {{ name.price }}
+                            </p>
+
+                            <!-- <hr> -->
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {% for item in menu %}
+                    {% if item.header == name %}
+                        <div class="menu-item">
+                            <p class="sub2">
+                                <!-- {% if item.subtitle %} -->
+                                    <!-- <p class="sub"> {{ item.subtitle | linebreaksbr }} </p> -->
+                                <!-- {% endif %} -->
+                            </p>
+                            
+                            <p class="name">
+                                <!-- {% block edit_order3 %} {% endblock %} -->
+                                {% if item.dinner_number %}
+                                    {{ item.dinner_number }}.
+                                {% else %}
+                                    {{ item.menu_number }}.
+                                {% endif %}
+
+                                {{ item.name }}
+
+                                {% if item.spicy %}
+                                    &nbsp &#x1f336;
+                                {% endif %}
+                            </p>
+
+                            <p class="price">
+                                {% if item.large_price %}
+                                    (Sm.) {{ item.price }} <br> (Lg.) {{ item.large_price }}
+                                {% elif item.quart_price %}
+                                    (Pt.) {{ item.price }} <br> (Qt.) {{ item.quart_price }}
+                                {% elif item.bottle_price %}
+                                    (Can) {{ item.price }} <br> (20 oz.) {{ item.bottle_price }}
+                                {% else %}
+                                    {{ item.price }}
+                                {% endif %}
+                            </p>
+
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
-        <!-- </div> -->
+
+            <hr> <hr>
+
+            {% endfor %}
+        </div>
     </div>
 </div>
 
@@ -171,70 +169,6 @@
 {% endblock %}
 
 {% block script %}
-<script>
-    function lookUp(searchBar) {
-        input = document.getElementById("myInput");
-        items = document.getElementsByClassName("name");
-        prices = document.getElementsByClassName("price");
-        sub = document.getElementsByClassName("sub2");
-
-        input = input.value.split('with').join('w.');
-        input = input.split('w/').join('w.');
-
-        input = input.split('veggies').join('vegetable');
-        input = input.split('veggie').join('vegetable');
-        input = input.split('vegg').join('vegetable');
-
-        //headers = document.getElementsByClassName("text-center");
-
-        //for (i = 0; i < headers.length; i++) {
-            //console.log(headers[i].nextElementSibling.nextElementSibling);
-        //}
-
-        let hasMatch = false;
-
-        filter = input.toUpperCase();
-
-        console.log("User input: " + filter);
-
-        let notfound = document.getElementsByClassName("notFound");
-
-        for (i = 0; i < items.length; i++) {
-            item_name = items[i].innerText;
-
-            //console.log(item_name);
-
-            //console.log("here: " + item_name.toUpperCase().indexOf(filter));
-
-            if (item_name.toUpperCase().indexOf(filter) > -1) {
-                items[i].style.display = "";
-                prices[i].style.display = "";
-                sub[i].style.display = "";
-                hasMatch = true;
-            }
-            else {
-                items[i].style.display = "none";
-                //items[i].style.maxHeight = "0px";
-                prices[i].style.display = "none";
-                //prices[i].style.maxHeight = "0px";
-                sub[i].style.display = "none";
-                //sub[i].style.maxHeight = "0px";
-            }
-        }
-
-        if (!hasMatch && notfound.length == 0) {
-            var paragraph = document.createElement("p");
-            paragraph.className = "notFound";
-            var text = document.createTextNode("The item you are looking for is not available");
-
-            paragraph.appendChild(text);
-
-            searchBar.parentNode.insertBefore(paragraph, searchBar.nextSibling);
-        }
-        else if (hasMatch && searchBar.nextElementSibling) {
-            searchBar.nextElementSibling.style.display = "none";
-        }
-    }
-</script>
-
+<script src="{% static 'js/menu_functions.js' %}"></script>
+<script src="{% static 'js/add_image.js' %}"></script>
 {% endblock %}

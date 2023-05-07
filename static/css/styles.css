@@ -78,7 +78,7 @@ html, body {
     min-height: 750px;
     position: sticky;
     overflow-x: hidden;
-    background-color: #84c8ff;
+    background-color: #7bbef6;
     max-width: 20%;
     /* padding-right: 10px; */
     float: left;
@@ -135,11 +135,8 @@ html, body {
 .menu-item-container {
     /* flex-direction:column; */
     display: flex;
-    gap: 10px;
+    gap: 2px;
     flex-wrap: wrap;
-    /*grid-template-rows: auto; */
-    /* grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); */
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -151,7 +148,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin: 10px;
+    margin: 5px;
     width: 250px;
     height: 180px;
 }
@@ -175,6 +172,12 @@ html, body {
 .sub2 {
     font-size: 15px;
     font-style: italic;
+}
+
+.menu-item-image {
+    max-width: 120px;
+    height: 70px;
+    margin-right: 10px;
 }
 
 /* search bar styling **/
@@ -213,7 +216,7 @@ hr.menu {
 .return-top a {
     text-decoration: none;
     text-align: center;
-    text-size: 5px;
+    font-size: 25px;
 }
 
 .return-top:hover {
@@ -286,4 +289,9 @@ hr.menu {
 .class-for-home {
     color: red;
 }
+
+grid-template-rows: auto;
+grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+flex-direction: column;
+
 */
