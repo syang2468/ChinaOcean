@@ -5,6 +5,8 @@ items = document.getElementsByClassName("name");
 
 // console.log(subtitle);
 
+var cache = {};
+
 // iterate through all items
 for (i = 0; i < items.length; i++) {
     // get item name
@@ -18,14 +20,19 @@ for (i = 0; i < items.length; i++) {
 
     // filter the items names
     item_name = item_name.toLowerCase();
+    //if the name of item contains w.
+    if(item_name.split("w. ").length == 2) {
+        item_name = item_name.split("w. ")[0] + "w " + item_name.split("w. ")[1];
+    }
     item_name = item_name.split(". ")[1]; //remove the number to the items
+    console.log(item_name);
     item_name = item_name.split(" ").join("-"); //replace spaces with '-' (this is due to image name choice)
     item_name = item_name.split("- -🌶")[0]; //remove all of the spicy symbols
 
     // Generate the image name
     var imageSource = "/static/dishes/" + item_name + ".png";
 
-    console.log(imageSource);
+    // console.log(imageSource);
 
     // Set image.src to the file name found about
     image.src = imageSource;
@@ -43,13 +50,49 @@ for (i = 0; i < items.length; i++) {
            The default value is true.
     */
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('HEAD', imageSource, false);
-    xhr.send();
-    if (xhr.status == "404") {
-        console.log("File not found for : " + imageSource);
+    // var xhr = new XMLHttpRequest();
+    // xhr.open('HEAD', imageSource, false);
+    // xhr.send();
+    // if (xhr.status == "404") {
+    //     console.log("File not found for : " + imageSource);
+    // } else {
+    //     // File exists
+    //     subtitle[i].appendChild(image);
+    // }
+    // xhr.open("HEAD", imageSource, true);
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    //         console.log("****HERE*******");
+    //         subtitle[i].appendChild(image);
+    //     }
+    // }
+
+    if (imageSource in cache) {
+        // use cached result
+        if (cache[imageSource]) {
+            // File exists
+            subtitle[i].appendChild(image);
+            // Set image.src to the file name found above
+            image.src = imageSource;
+            console.log("****FROM CACHE******");
+        } else {
+            // File doesn't exist
+            console.log("File not found for : " + imageSource);
+        }
     } else {
-        // File exists
-        subtitle[i].appendChild(image);
+        // make a new HTTP request and cache the result
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', imageSource, false);
+        xhr.send();
+        if (xhr.status == "404") {
+            console.log("File not found for : " + imageSource);
+            cache[imageSource] = false;
+        } else {
+            // File exists
+            subtitle[i].appendChild(image);
+            // Set image.src to the file name found above
+            image.src = imageSource;
+            cache[imageSource] = true;
+        }
     }
-}
+  }
