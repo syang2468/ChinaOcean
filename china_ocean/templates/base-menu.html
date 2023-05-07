@@ -63,6 +63,9 @@
                                     <!-- <i class="fa-solid fa-eye"></i> -->
                                     <!-- <img class="menu-item-image" src="{% static 'dishes/honey-chicken.png' %}" alt=""> -->
                                 <!-- {% endif %} -->
+                                {% if item.lunch_image_url %}
+                                    <img class="menu-item-image" src="{{ item.lunch_image_url }}">
+                                {% endif %}
                             </p>
 
                             <p class="name">

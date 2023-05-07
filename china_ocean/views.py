@@ -8,10 +8,10 @@ def menu(request):
     template_name = 'base-menu.html'
 
     context = {
-        "header": Header.objects.all(),
-        "menu": Item.objects.filter(menu_number__isnull=False).order_by("number"),
-        "lunch": Item.objects.filter(lunch_number__isnull=False).order_by("combo_lunch_number"),
-        "dinner": Item.objects.filter(dinner_number__isnull=False).order_by("combo_lunch_number")
+    "header": Header.objects.all(),
+    "menu": Item.objects.filter(menu_number__isnull=False).order_by("number"),
+    "lunch": Item.objects.filter(lunch_number__isnull=False).order_by("combo_lunch_number"),
+    "dinner": Item.objects.filter(dinner_number__isnull=False).order_by("combo_lunch_number")
     }
 
     return render(request, template_name, context)
@@ -38,16 +38,16 @@ def header_setup():
 
     for header in data:
         value = header.get("Name")
-        print(value)
+    print(value)
 
-        Header.objects.create(name=value)
+    Header.objects.create(name=value)
 
-        if header.get("Subtitle"):
-            Header.objects.filter(name=value).update(sub=header.get("Subtitle"))
-        if header.get("Side"):
-            Header.objects.filter(name=value).update(side=header.get("Side"))
-        if header.get("Price"):
-            Header.objects.filter(name=value).update(price=header.get("Price"))
+    if header.get("Subtitle"):
+        Header.objects.filter(name=value).update(sub=header.get("Subtitle"))
+    if header.get("Side"):
+        Header.objects.filter(name=value).update(side=header.get("Side"))
+    if header.get("Price"):
+        Header.objects.filter(name=value).update(price=header.get("Price"))
 
 
 def menu_setup():
@@ -57,8 +57,8 @@ def menu_setup():
     Item.objects.all().delete()
 
     for header in data:
-        # print(header)
-        # print(data.get(header))
+    # print(header)
+    # print(data.get(header))
         print("Resetting Menu")
         value = data.get(header)
 
@@ -67,8 +67,8 @@ def menu_setup():
                 menu_item = value[item]
                 item_name = menu_item.get('Name')
                 Item.objects.create(name=item_name,
-                                    price=menu_item.get('Price'),
-                                    header=Header.objects.get(name=header))
+                            price=menu_item.get('Price'),
+                            header=Header.objects.get(name=header))
                 if menu_item.get("Lunch"):
                     Item.objects.filter(name=item_name).update(lunch='Yes')
                 if menu_item.get("Dinner"):
@@ -96,29 +96,34 @@ def menu_setup():
                 if menu_item.get("Combo_Number"):
                     Item.objects.filter(name=item_name).update(combo_lunch_number=menu_item.get("Combo_Number"))
 
+def change_item_name_to_file(item_name):
+    image_url = item_name.lower()
 
-def add_image():
+    # remove the '.' after the w for next split
+    w_split = image_url.split("w. ")
+    if(len(w_split) == 2):
+        image_url = w_split[0] + "w " + w_split[1]
+    
+    image_url = image_url.replace(" ", "-"); #replace spaces with '-' (this is due to image name choice)
+    
+    dinner_url = ""
+    lunch_url = ""
+
+    # check if it is a combo or lunch special
+    if Item.objects.get(name = item_name).dinner_number:
+        dinner_url = "/static/dishes/dinner-special/" + image_url + ".png"
+    if Item.objects.get(name=item_name).lunch_number:
+        lunch_url = "/static/dishes/lunch/" + image_url + ".png"
+
+    image_url = "/static/dishes/" + image_url + ".png"
+
+    return image_url, dinner_url, lunch_url
+
+
+def add_image_url_for_all():
+    print("Resetting item urls")
     for item in Item.objects.all():
-        # make the item names uniform
-        image_url = item.name.lower()
-
-        # remove the '.' after the w for next split
-        w_split = image_url.split("w. ")
-        if(len(w_split) == 2):
-            image_url = w_split[0] + "w " + w_split[1]
-        
-        image_url = image_url.replace(" ", "-"); #replace spaces with '-' (this is due to image name choice)
-        
-        dinner_name = ""
-        lunch_name = ""
-
-        # check if it is a combo or lunch special
-        if item.dinner_number:
-            dinner_name = "/static/dishes/dinner-special/" + image_url + ".png"
-        elif item.lunch_number:
-            lunch_name = "/static/dishes/lunch/" + image_url + ".png"
-        
-        image_url = "/static/dishes/" + image_url + ".png"
+        image_url, dinner_name, lunch_name = change_item_name_to_file(item.name)
         
         print(image_url)
 
@@ -130,6 +135,27 @@ def add_image():
         if os.path.isfile("/Users/sofiayang/ChinaOcean" + lunch_name):
             Item.objects.filter(name=item.name).update(lunch_image_url = lunch_name)
 
+
+def add_image_url(item_name):
+    image_url, dinner_name, lunch_name = change_item_name_to_file(item_name)  
+
+    print(lunch_name)  
+
+    # check if images are available, if so update the corresponding field
+    if os.path.isfile("/Users/sofiayang/ChinaOcean" + image_url):
+        Item.objects.filter(name=item_name).update(image_url = image_url)
+        print("set url for", item_name, "as", image_url)
+    if os.path.isfile("/Users/sofiayang/ChinaOcean" + dinner_name):
+        Item.objects.filter(name=item_name).update(dinner_image_url = dinner_name)
+        print("set dinner url for", item_name, "as", dinner_name)
+    if os.path.isfile("/Users/sofiayang/ChinaOcean" + lunch_name):
+        Item.objects.filter(name=item_name).update(lunch_image_url = lunch_name)
+        print("set lunch url for", item_name, "as", lunch_name)
+
+
 # header_setup()
 # menu_setup()
-# add_image()
+# add_image_url_for_all()
+# add_image_url("Shrimp w. Broccoli")
+add_image_url("Vegetable Chow Mein")
+# add_image_url("Chicken w. Broccoli")
