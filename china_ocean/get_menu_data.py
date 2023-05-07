@@ -27,9 +27,9 @@ def header_setup():
         # china_ocean.Header.objects.create(name = header)
 
 def image_setup():
-    
+
     pass
 
 
 # initial_menu_setup()
-header_setup()
+# header_setup()

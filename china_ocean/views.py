@@ -1,6 +1,6 @@
-import json
+import json, os
 from django.shortcuts import render
-from .models import Header, Item
+from china_ocean.models import Header, Item
 
 
 # Create your views here.
@@ -33,6 +33,8 @@ def header_setup():
         data = json.load(data_file)
 
     Header.objects.all().delete()
+
+    print("Here")
 
     for header in data:
         value = header.get("Name")
@@ -96,8 +98,38 @@ def menu_setup():
 
 
 def add_image():
-    # Item.objects.filter(name="Honey Chicken").update(image=)
-    pass
+    for item in Item.objects.all():
+        # make the item names uniform
+        image_url = item.name.lower()
+
+        # remove the '.' after the w for next split
+        w_split = image_url.split("w. ")
+        if(len(w_split) == 2):
+            image_url = w_split[0] + "w " + w_split[1]
+        
+        image_url = image_url.replace(" ", "-"); #replace spaces with '-' (this is due to image name choice)
+        
+        dinner_name = ""
+        lunch_name = ""
+
+        # check if it is a combo or lunch special
+        if item.dinner_number:
+            dinner_name = "/static/dishes/dinner-special/" + image_url + ".png"
+        elif item.lunch_number:
+            lunch_name = "/static/dishes/lunch/" + image_url + ".png"
+        
+        image_url = "/static/dishes/" + image_url + ".png"
+        
+        print(image_url)
+
+        if os.path.isfile("/Users/sofiayang/ChinaOcean" + image_url):
+            print("*********************here: " + image_url)
+            Item.objects.filter(name=item.name).update(image_url = image_url)
+        if os.path.isfile("/Users/sofiayang/ChinaOcean" + dinner_name):
+            Item.objects.filter(name=item.name).update(dinner_image_url = dinner_name)
+        if os.path.isfile("/Users/sofiayang/ChinaOcean" + lunch_name):
+            Item.objects.filter(name=item.name).update(lunch_image_url = lunch_name)
 
 # header_setup()
 # menu_setup()
+# add_image()

@@ -41,9 +41,9 @@ class Item(models.Model):
     spicy = models.CharField(max_length=4, choices=YesNo.choices, null=True, blank=True)
     number = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True)
     combo_lunch_number = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True)
-    image = models.ImageField(upload_to="dishes/", null=True, blank=True)
-    dinner_image = models.ImageField(upload_to="dishes/dinner-special/", null=True, blank=True)
-    lunch_image = models.ImageField(upload_to="dishes/lunch/", null=True, blank=True)
+    image_url = models.TextField(blank=True, null=True)
+    dinner_image_url = models.TextField(blank=True, null=True)
+    lunch_image_url = models.TextField(blank=True, null=True)
 
 
     def __str__(self):

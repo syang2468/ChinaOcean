@@ -89,8 +89,8 @@
                                 <!-- {% if item.subtitle %} -->
                                     <!-- {{ item.subtitle | linebreaksbr }} -->
                                 <!-- {% endif %} -->
-                                {% if item.dinner_image %}
-                                    <img class="menu-item-image" src="{{ item.dinner_image.url }}">
+                                {% if item.dinner_image_url %}
+                                    <img class="menu-item-image" src="{{ item.dinner_image_url }}">
                                 {% endif %}
                             </p>
 
@@ -118,8 +118,8 @@
                                 <!-- {% if item.subtitle %} -->
                                     <!-- <p class="sub"> {{ item.subtitle | linebreaksbr }} </p> -->
                                 <!-- {% endif %} -->
-                                {% if item.image %}
-                                    <img class="menu-item-image" src="{{ item.image.url }}">
+                                {% if item.image_url %}
+                                    <img class="menu-item-image" src="{{ item.image_url }}">
                                 {% endif %}
                             </p>
                             
