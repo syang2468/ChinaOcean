@@ -94,5 +94,10 @@ def menu_setup():
                 if menu_item.get("Combo_Number"):
                     Item.objects.filter(name=item_name).update(combo_lunch_number=menu_item.get("Combo_Number"))
 
+
+def add_image():
+    # Item.objects.filter(name="Honey Chicken").update(image=)
+    pass
+
 # header_setup()
 # menu_setup()

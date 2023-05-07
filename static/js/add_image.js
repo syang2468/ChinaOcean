@@ -20,17 +20,28 @@ for (i = 0; i < items.length; i++) {
 
     // filter the items names
     item_name = item_name.toLowerCase();
+
+    var w_split = item_name.split("w. ");
     //if the name of item contains w.
-    if(item_name.split("w. ").length == 2) {
-        item_name = item_name.split("w. ")[0] + "w " + item_name.split("w. ")[1];
+    if(w_split.length == 2) {
+        item_name = w_split[0] + "w " + w_split[1];
     }
-    item_name = item_name.split(". ")[1]; //remove the number to the items
-    console.log(item_name);
+
+    var period_split = item_name.split(". ");
+    item_name = period_split[1]; //remove the number to the items
+    // check if it is a combo or lunch special
+    if(period_split[0].substring(0, 1) == "c") {
+        item_name = "dinner-special/" + item_name;
+    }
+    else if(period_split[0].substring(0, 1) == "l") {
+        item_name = "l-" + item_name;
+    }
     item_name = item_name.split(" ").join("-"); //replace spaces with '-' (this is due to image name choice)
     item_name = item_name.split("- -🌶")[0]; //remove all of the spicy symbols
+    console.log(item_name);
 
     // Generate the image name
-    var imageSource = "/static/dishes/" + item_name + ".png";
+    var imageSource = "/media/dishes/" + item_name + ".png";
 
     // console.log(imageSource);
 
@@ -74,7 +85,7 @@ for (i = 0; i < items.length; i++) {
             subtitle[i].appendChild(image);
             // Set image.src to the file name found above
             image.src = imageSource;
-            console.log("****FROM CACHE******");
+            console.log("****FROM CACHE******: " + imageSource);
         } else {
             // File doesn't exist
             console.log("File not found for : " + imageSource);

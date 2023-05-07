@@ -75,7 +75,7 @@
                             </p>
 
                             <p class="price">
-                                {{ name.price }}
+                                ${{ name.price }}
                             </p>
 
                         </div>
@@ -89,6 +89,9 @@
                                 <!-- {% if item.subtitle %} -->
                                     <!-- {{ item.subtitle | linebreaksbr }} -->
                                 <!-- {% endif %} -->
+                                {% if item.dinner_image %}
+                                    <img class="menu-item-image" src="{{ item.dinner_image.url }}">
+                                {% endif %}
                             </p>
 
                             <p class="name">
@@ -100,7 +103,7 @@
                             </p>
 
                             <p class="price">
-                                {{ name.price }}
+                                ${{ name.price }}
                             </p>
 
                             <!-- <hr> -->
@@ -115,17 +118,14 @@
                                 <!-- {% if item.subtitle %} -->
                                     <!-- <p class="sub"> {{ item.subtitle | linebreaksbr }} </p> -->
                                 <!-- {% endif %} -->
+                                {% if item.image %}
+                                    <img class="menu-item-image" src="{{ item.image.url }}">
+                                {% endif %}
                             </p>
                             
                             <p class="name">
                                 <!-- {% block edit_order3 %} {% endblock %} -->
-                                {% if item.dinner_number %}
-                                    {{ item.dinner_number }}.
-                                {% else %}
-                                    {{ item.menu_number }}.
-                                {% endif %}
-
-                                {{ item.name }}
+                                {{ item.menu_number }}. {{ item.name }}
 
                                 {% if item.spicy %}
                                     &nbsp &#x1f336;
@@ -134,13 +134,13 @@
 
                             <p class="price">
                                 {% if item.large_price %}
-                                    (Sm.) {{ item.price }} <br> (Lg.) {{ item.large_price }}
+                                    (Sm.) ${{ item.price }} &nbsp; (Lg.) ${{ item.large_price }}
                                 {% elif item.quart_price %}
-                                    (Pt.) {{ item.price }} <br> (Qt.) {{ item.quart_price }}
+                                    (Pt.) ${{ item.price }} <br> (Qt.) ${{ item.quart_price }}
                                 {% elif item.bottle_price %}
-                                    (Can) {{ item.price }} <br> (20 oz.) {{ item.bottle_price }}
+                                    (Can) ${{ item.price }} <br> (20 oz.) ${{ item.bottle_price }}
                                 {% else %}
-                                    {{ item.price }}
+                                    ${{ item.price }}
                                 {% endif %}
                             </p>
 
@@ -170,5 +170,5 @@
 
 {% block script %}
 <script src="{% static 'js/menu_functions.js' %}"></script>
-<script src="{% static 'js/add_image.js' %}"></script>
+<!-- <script src="{% static 'js/add_image.js' %}"></script> -->
 {% endblock %}

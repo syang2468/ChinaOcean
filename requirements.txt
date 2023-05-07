@@ -21,3 +21,6 @@ daphne==4.0.0
 
 # for static files
 whitenoise
+
+# for media files
+Pillow
