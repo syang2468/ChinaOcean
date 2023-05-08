@@ -95,13 +95,6 @@ html, body {
     font-weight: 1000;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-sidebar {
-        display: none;
-    }
-}
-
-
 .menu-ul {
     line-height: 20px;
     word-wrap: break-word;
@@ -112,6 +105,15 @@ html, body {
     width: 80%;
     margin: auto;
     float: left;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-sidebar {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+    }
 }
 
 /* Menu item/price styling */
