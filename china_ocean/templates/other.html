@@ -1,73 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        .popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.popup-content .hover {
-    transform: scale(1.025);
-}
-
-.close-btn {
-  display: block;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .popup {
-    display: none;
-  }
-}
-
-    </style>
 <head>
-  <title>Example</title>
-  <script>
-    function openPopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "block";
-}
+  <title>Scrolling Background Images</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('/static/dishes/beef-on-stick-\(4\).png'), url('/static/dishes/beef-w-broccoli.png'), url('/static/dishes/general-tao\'s-chicken.jpg');
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center top, center, center bottom;
+      /* background-size: cover; */
+      background-size: auto, auto, auto;
+    }
 
-function closePopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "none";
-}
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
 
-  </script>
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* animation: scrollBackground 20s linear infinite; */
+      /* mix-blend-mode: multiply; */
+    }
+
+    .content {
+      height: 2000px; /* Just for demonstration */
+      padding: 20px;
+      font-size: 24px;
+    }
+  </style>
 </head>
 <body>
-    <div class="menu-item" onclick="openPopup()">
-        <img src="burger.jpg" alt="Burger">
-        <h3>Burger</h3>
-        <p>A juicy beef patty with lettuce, tomato, and pickles on a sesame seed bun.</p>
-        <span class="price">$8.99</span>
-      </div>
-      
-      <div class="popup" id="popup">
-        <div class="popup-content">
-          <h2>Burger</h2>
-          <p>A juicy beef patty with lettuce, tomato, and pickles on a sesame seed bun.</p>
-          <span class="price">$8.99</span>
-          <button class="close-btn" onclick="closePopup()">Close</button>
-        </div>
-      </div>
-      
+  <div class="background-container">
+    <!-- <div class="background-image" style="background-image: url('/static/dishes/beef-on-stick-\(4\).png');"></div>
+    <div class="background-image" style="background-image: url('/static/dishes/beef-w-broccoli.png');"></div>
+    <div class="background-image" style="background-image: url('/static/dishes/general-tao\'s-chicken.jpg');"></div> -->
+    <!-- Add more background images as needed -->
+  </div>
+
+  <div class="content">
+    <h1>Scrolling Background Images</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius, nisi ac consequat venenatis, enim elit lacinia metus, in eleifend nisl nisl eget metus. Curabitur malesuada, felis in malesuada feugiat, ante enim vestibulum odio, non volutpat purus ligula id nunc. Suspendisse potenti. Sed eget nunc id odio lobortis suscipit at et neque. Sed elementum ex non mauris porttitor facilisis. Nullam malesuada maximus felis, sit amet ullamcorper enim suscipit et. Morbi ac arcu in dui fringilla sollicitudin. Praesent varius ante lacus, a tincidunt dolor tempor vitae. Sed non malesuada nisi. Proin suscipit justo non tortor sollicitudin tempus. Integer ac eros in tortor dapibus ullamcorper. Aliquam accumsan elit sed mauris consectetur, et fermentum velit egestas. Donec id sem nec ligula venenatis pretium et et metus. Aliquam aliquam lorem in ante facilisis ullamcorper.</p>
+    <!-- Add more content as needed -->
+  </div>
 </body>
 </html>

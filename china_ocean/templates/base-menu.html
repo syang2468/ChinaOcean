@@ -55,7 +55,7 @@
 
                 {% if name.name == "Lunch Special" %}
                     {% for item in lunch %}
-                        <div class="menu-item">
+                        <div class="menu-item" onclick="openPopup('lunch-{{ item.pk }}')">
                             <p class="sub2">
                                 <!-- {% if item.subtitle %} -->
                                     <!-- {{ item.subtitle |linebreaksbr }} -->
@@ -74,7 +74,7 @@
                                     &nbsp &#x1f336;
                                 {% endif %}
 
-                               <!-- <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p> -->
+                                <!-- <p class="edit_order"> &lt;!&ndash;{% block edit_order1 %} {% endblock %}&ndash;&gt; </p> -->
                             </p>
 
                             <p class="price">
@@ -82,12 +82,31 @@
                             </p>
 
                         </div>
+
+                        <div class="popup" id="popup-lunch-{{ item.pk }}"> <!-- onclick="closePopup('{{ item.pk }}')"> -->
+                            <div class="popup-content">
+                                <h2> 
+                                    {{ item.lunch_number }}. {{ item.name }} 
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </h2> 
+                                {% if item.subtitle %}
+                                    <p> {{ item.subtitle }} </p>
+                                {% endif %}
+                                {% if item.lunch_image_url %}
+                                    <img class="popup-image" src="{{ item.lunch_image_url }}"> <br>
+                                {% endif %}
+                                <p> ${{ name.price }} </p>
+                                <button class="close-btn" onclick="closePopup('lunch-{{ item.pk }}')">Close</button>
+                            </div>
+                        </div>
                     {% endfor %}
                 {% endif %}
 
                 {% if name.name == "Dinner Combo" %}
                     {% for item in dinner %}
-                        <div class="menu-item">
+                        <div class="menu-item" onclick ="openPopup('dinner-{{ item.pk }}')">
                             <p class="sub2">
                                 <!-- {% if item.subtitle %} -->
                                     <!-- {{ item.subtitle | linebreaksbr }} -->
@@ -111,12 +130,31 @@
 
                             <!-- <hr> -->
                         </div>
+
+                        <div class="popup" id="popup-dinner-{{ item.pk }}"> <!-- onclick="closePopup('{{ item.pk }}')"> -->
+                            <div class="popup-content">
+                                <h2> 
+                                    {{ item.dinner_number }}. {{ item.name }} 
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </h2> 
+                                {% if item.subtitle %}
+                                    <p> {{ item.subtitle | linebreaksbr }} </p>
+                                {% endif %}
+                                {% if item.dinner_image_url %}
+                                    <img class="popup-image" src="{{ item.dinner_image_url }}"> <br> <br>
+                                {% endif %}
+                                <p> ${{ name.price }} </p>
+                                <button class="close-btn" onclick="closePopup('dinner-{{ item.pk }}')">Close</button>
+                            </div>
+                        </div>
                     {% endfor %}
                 {% endif %}
 
                 {% for item in menu %}
                     {% if item.header == name %}
-                        <div class="menu-item">
+                        <div class="menu-item" onclick="openPopup('{{ item.pk }}')">
                             <p class="sub2">
                                 <!-- {% if item.subtitle %} -->
                                     <!-- <p class="sub"> {{ item.subtitle | linebreaksbr }} </p> -->
@@ -125,11 +163,10 @@
                                     <img class="menu-item-image" src="{{ item.image_url }}">
                                 {% endif %}
                             </p>
-                            
+                                
                             <p class="name">
                                 <!-- {% block edit_order3 %} {% endblock %} -->
                                 {{ item.menu_number }}. {{ item.name }}
-
                                 {% if item.spicy %}
                                     &nbsp &#x1f336;
                                 {% endif %}
@@ -147,6 +184,38 @@
                                 {% endif %}
                             </p>
 
+                        </div>
+
+                        <div class="popup" id="popup-{{ item.pk }}"> <!-- onclick="closePopup('{{ item.pk }}')"> -->
+                            <div class="popup-content">
+                                <h2> 
+                                    {{ item.name }} 
+                                    {% if item.spicy %}
+                                        &nbsp &#x1f336;
+                                    {% endif %}
+                                </h2> 
+                                {% if item.subtitle %}
+                                    <p> {{ item.subtitle | linebreaksbr }} </p>
+                                {% endif %}
+                                {% if item.image_url %}
+                                    <img class="popup-image" src="{{ item.image_url }}"> <br> <br>
+                                {% endif %}
+                                <p>
+                                    {% if item.large_price %}
+                                        (Sm.) ${{ item.price }} &nbsp; (Lg.) ${{ item.large_price }}
+                                    {% elif item.quart_price %}
+                                        (Pt.) ${{ item.price }} <br> (Qt.) ${{ item.quart_price }}
+                                    {% elif item.bottle_price %}
+                                        (Can) ${{ item.price }} <br> (20 oz.) ${{ item.bottle_price }}
+                                    {% else %}
+                                        ${{ item.price }}
+                                    {% endif %}
+                                </p>
+                                <!-- <div> -->
+                                    <button style="float: left" class="close-btn" onclick="closePopup('{{ item.pk }}')">Close</button>
+                                    <!-- <p style="float: right"> ${{ item.price }} </p> -->
+                                <!-- </div> -->
+                            </div>
                         </div>
                     {% endif %}
                 {% endfor %}

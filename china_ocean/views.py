@@ -38,16 +38,15 @@ def header_setup():
 
     for header in data:
         value = header.get("Name")
-    print(value)
+        print(value)
+        Header.objects.create(name=value)
 
-    Header.objects.create(name=value)
-
-    if header.get("Subtitle"):
-        Header.objects.filter(name=value).update(sub=header.get("Subtitle"))
-    if header.get("Side"):
-        Header.objects.filter(name=value).update(side=header.get("Side"))
-    if header.get("Price"):
-        Header.objects.filter(name=value).update(price=header.get("Price"))
+        if header.get("Subtitle"):
+            Header.objects.filter(name=value).update(sub=header.get("Subtitle"))
+        if header.get("Side"):
+            Header.objects.filter(name=value).update(side=header.get("Side"))
+        if header.get("Price"):
+            Header.objects.filter(name=value).update(price=header.get("Price"))
 
 
 def menu_setup():
@@ -156,6 +155,6 @@ def add_image_url(item_name):
 # header_setup()
 # menu_setup()
 # add_image_url_for_all()
-# add_image_url("Shrimp w. Broccoli")
-add_image_url("Vegetable Chow Mein")
+# add_image_url("Fried Chicken Wing (6) w. House Special Fried Rice")
+# add_image_url("Beef on Stick (4)")
 # add_image_url("Chicken w. Broccoli")

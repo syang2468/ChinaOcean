@@ -31,7 +31,7 @@ urlpatterns = [
     path('menu/edit', edit_menu, name="edit"),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view(), name='logout'),
-    path('other', other, name="other")
+    # path('other/', other, name="other")
 ]
 
 if settings.DEBUG:

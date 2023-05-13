@@ -3,57 +3,64 @@
 
     {
       "Name" : "Ma Po To Fu",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Lunch" : "Yes",
       "Dinner_Number" : "C1",
       "Lunch_Number" : "L1",
-      "Combo_Number" : 1
+      "Combo_Number" : 1,
+      "Subtitle" : "Diced tofu with peas and carrots in a spicy sauce"
     },
 
     {
       "Name" : "Bar-B-Q Spare Ribs",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Lunch" : "Yes",
       "Dinner_Number" : "C18",
       "Lunch_Number" : "L19",
-      "Combo_Number" : 23
+      "Combo_Number" : 23,
+      "Subtitle" : "Roasted ribs in homemade barbeque sauce"
     },
 
     {
       "Name" : "Bar-B-Q Boneless Ribs",
-      "Price": 12.65,
+      "Price": 12.85,
       "Lunch" : "Yes",
       "Dinner_Number" : "C19",
       "Lunch_Number" : "L20",
-      "Combo_Number" : 24
+      "Combo_Number" : 24,
+      "Subtitle" : "Roasted boneless ribs in homemade barbeque sauce"
     },
 
     {
       "Name" : "Mixed Vegetable w. Shrimp",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Dinner_Number" : "C24a",
-      "Combo_Number" : 42
+      "Combo_Number" : 42,
+      "Subtitle" : "Stir fried jumbo shrimp with broccoli, mushroom, snow peas, cabbage, celery, sliced carrots in brown sauce"
     },
 
     {
       "Name" : "Mixed Vegetable w. Beef",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Dinner_Number" : "C24b",
-      "Combo_Number" : 43
+      "Combo_Number" : 43,
+      "Subtitle" : "Sliced beef with broccoli, mushroom, snow peas, cabbage, celery, sliced carrots in brown sauce"
     },
 
     {
       "Name" : "Mixed Vegetable w. Pork",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Dinner_Number" : "C24c",
-      "Combo_Number" : 44
+      "Combo_Number" : 44,
+      "Subtitle" : "Sliced pork with broccoli, mushroom, snow peas, cabbage, celery, sliced carrots in brown sauce"
     },
 
     {
       "Name" : "Mixed Vegetable w. Chicken",
-      "Price" : 12.65,
+      "Price" : 12.85,
       "Dinner_Number" : "C24d",
-      "Combo_Number" : 45
+      "Combo_Number" : 45,
+      "Subtitle" : "Sliced pork with broccoli, mushroom, snow peas, cabbage, celery, sliced carrots in brown sauce"
     }
 
   ],
@@ -64,63 +71,79 @@
       "Name"  : "Fried Chicken Wing (6)", 
       "Price" : 7.99,
       "Menu_Number" : "A1",
-      "Number" : 1
+      "Number" : 1,
+      "Subtitle" : "6 pieces deep fried chicken wings"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. Fried Rice",
       "Price" : 9.99,
       "Menu_Number" : "A2",
-      "Number" : 2
+      "Number" : 2,
+      "Subtitle" : "6 pieces deep fried chicken wings with fried rice"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. French Fries",
       "Price" : 9.99,
       "Menu_Number" : "A3",
-      "Number" : 3
+      "Number" : 3,
+      "Subtitle" : "6 pieces deep fried chicken wings with french fries"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. Chicken Fried Rice",
       "Price" : 11.59,
       "Menu_Number" : "A4",
-      "Number" : 4
+      "Number" : 4,
+      "Subtitle" : "6 pieces deep fried chicken wings with chicken fried rice"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. Pork Fried Rice",
       "Price" : 11.59,
       "Menu_Number" : "A5",
-      "Number" : 5
+      "Number" : 5,
+      "Subtitle" : "6 pieces deep fried chicken wings with pork fried rice"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. Shrimp Fried Rice",
       "Price" : 13.59,
       "Menu_Number" : "A6",
-      "Number" : 6
+      "Number" : 6,
+      "Subtitle" : "6 pieces deep fried chicken wings with shrimp fried rice"
     },
     
     {
       "Name"  : "Fried Chicken Wing (6) w. Beef Fried Rice",
       "Price" : 13.59,
       "Menu_Number" : "A7",
-      "Number" : 7
+      "Number" : 7,
+      "Subtitle" : "6 pieces deep fried chicken wings with beef fried rice"
     },
+
+    {
+      "Name"  : "Fried Chicken Wing (6) w. House Special Fried Rice",
+      "Price" : 15.59,
+      "Menu_Number" : "A8",
+      "Number" : 8,
+      "Subtitle" : "6 pieces deep fried chicken wings with house special (chicken, pork, shrimp) fried rice"
+    },
+
     
     {
       "Name"  : "French Fries",
       "Price" : 3.99,
-      "Menu_Number" : "A8",
-      "Number" : 8
+      "Menu_Number" : "A9",
+      "Number" : 9
     },
     
     {
       "Name"  : "Chicken Nugget (8)",
       "Price" : 3.90,
-      "Menu_Number" : "A9",
-      "Number" : 9
+      "Menu_Number" : "A10",
+      "Number" : 10
     }
 
   ],
@@ -699,7 +722,7 @@
   "Chicken" : [
     {
       "Name" : "Moo Goo Gai Pan",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Dinner" : "Yes",
       "Lunch" : "Yes",
       "Menu_Number" : "50",
@@ -711,7 +734,7 @@
 
     {
       "Name" : "Chicken w. Broccoli",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Dinner" : "Yes",
       "Lunch" : "Yes",
       "Menu_Number" : "51",
@@ -723,21 +746,21 @@
 
     {
       "Name" : "Chicken w. Snow Peas",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Menu_Number" : "52",
       "Number" : 79
     },
 
     {
       "Name" : "Chicken w. Mushrooms",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Menu_Number" : "53",
       "Number" : 80
     },
 
     {
       "Name" : "Chicken w. Cashew Nuts",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Dinner" : "Yes",
       "Lunch" : "Yes",
       "Menu_Number" : "54",
@@ -749,7 +772,7 @@
 
     {
       "Name" : "Kung Pao Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Dinner" : "Yes",
       "Lunch" : "Yes",
@@ -762,7 +785,7 @@
 
     {
       "Name" : "Curry Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Lunch" : "Yes",
       "Menu_Number" : "56",
@@ -773,7 +796,7 @@
 
     {
       "Name" : "Hunan Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Dinner" : "Yes",
       "Lunch" : "Yes",
@@ -786,7 +809,7 @@
 
     {
       "Name" : "Chicken w. String Beans in Garlic Sauce",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Menu_Number" : "58",
       "Number" : 85
@@ -794,7 +817,7 @@
 
     {
       "Name" : "Szechuan Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Dinner" : "Yes",
       "Lunch" : "Yes",
@@ -802,12 +825,13 @@
       "Lunch_Number" : "L25a",
       "Dinner_Number" : "C23a",
       "Number" : 86,
-      "Combo_Number" : 33
+      "Combo_Number" : 33,
+      "Subtitle" : "Sliced chicken with broccoli, green pepper, carrots and onions in a special spicy brown sauce"
     },
 
     {
       "Name" : "Chicken w. Garlic Sauce",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Spicy" : "Yes",
       "Dinner" : "Yes",
       "Lunch" : "Yes",
@@ -820,7 +844,7 @@
 
     {
       "Name" : "Moo Shu Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Subtitle" : "(w. 4 pancakes)",
       "Menu_Number" : "61",
       "Number" : 88
@@ -828,7 +852,7 @@
 
     {
       "Name" : "Sweet & Sour Chicken",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Dinner" : "Yes",
       "Lunch" : "Yes",
       "Menu_Number" : "62",
@@ -840,14 +864,14 @@
 
     {
       "Name" : "Chicken w. Mixed Vegetables",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Menu_Number" : "63",
       "Number" : 90
     },
 
     {
       "Name" : "Chicken w. Black Bean Sauce",
-      "Price" : 12.59,
+      "Price" : 12.79,
       "Menu_Number" : "64",
       "Number" : 91
     }
@@ -921,7 +945,8 @@
       "Lunch_Number" : "L25b",
       "Dinner_Number" : "C23b",
       "Number" : 98,
-      "Combo_Number" : 34
+      "Combo_Number" : 34,
+      "Subtitle" : "Sliced beef with broccoli, green pepper, carrots and onions in a special spicy brown sauce"
     },
 
     {
@@ -1158,7 +1183,8 @@
       "Price" : 11.99,
       "Spicy" : "Yes",
       "Menu_Number" : "94",
-      "Number" : 122
+      "Number" : 122,
+      "Subtitle" : "Chunks of fried tofu with mixed vegetables in a brown sauce topped with peanuts"
     },
 
     {
@@ -1166,7 +1192,8 @@
       "Price" : 11.99,
       "Spicy" : "Yes",
       "Menu_Number" : "95",
-      "Number" : 123
+      "Number" : 123,
+      "Subtitle" : "Diced tofu with peas and carrots in a spicy sauce"
     },
 
     {

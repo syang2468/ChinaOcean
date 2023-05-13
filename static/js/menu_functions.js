@@ -72,3 +72,15 @@ function lookUp(searchBar) {
     //     searchBar.nextElementSibling.style.display = "none";
     // }
 }
+
+
+function openPopup(item_pk) {
+    console.log("popup-" + item_pk);
+    var popup = document.getElementById("popup-" + item_pk);
+    popup.style.display = "block";
+}
+
+function closePopup(item_pk) {
+    var popup = document.getElementById("popup-" + item_pk);
+    popup.style.display = "none";
+}
