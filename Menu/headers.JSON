@@ -101,5 +101,11 @@
     "Side" : "Side1"
   },
 
-  {"Name" : "Side Order"}
+  {
+    "Name" : "Side Order"
+  },
+
+  {
+    "Name" : "Dessert"
+  }
 ]

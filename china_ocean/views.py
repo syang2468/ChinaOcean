@@ -150,11 +150,14 @@ def add_image_url(item_name):
     if os.path.isfile("/Users/sofiayang/ChinaOcean" + lunch_name):
         Item.objects.filter(name=item_name).update(lunch_image_url = lunch_name)
         print("set lunch url for", item_name, "as", lunch_name)
+    if not os.path.isfile("/Users/sofiayang/ChinaOcean" + image_url):
+        Item.objects.filter(name=item_name).update(image_url = None)
+        print("Reset url for", item_name, "as", "None")
 
 
 # header_setup()
 # menu_setup()
 # add_image_url_for_all()
-# add_image_url("Fried Chicken Wing (6) w. House Special Fried Rice")
-# add_image_url("Beef on Stick (4)")
-# add_image_url("Chicken w. Broccoli")
+# add_image_url("Chicken w. Cashew Nuts")
+# add_image_url("Brown Rice")
+# add_image_url("Steamed Rice")
