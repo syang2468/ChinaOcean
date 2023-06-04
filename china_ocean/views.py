@@ -2,6 +2,10 @@ import json, os
 from django.shortcuts import render
 from china_ocean.models import Header, Item
 
+from django.shortcuts import get_object_or_404, redirect
+from django.template.response import TemplateResponse
+from payments import get_payment_model, RedirectNeeded
+
 
 # Create your views here.
 def menu(request):
@@ -155,9 +159,26 @@ def add_image_url(item_name):
         print("Reset url for", item_name, "as", "None")
 
 
+def payment_details(request, payment_id):
+    payment = get_object_or_404(get_payment_model(), id=payment_id)
+
+    try:
+        form = payment.get_form(data=request.POST or None)
+    except RedirectNeeded as redirect_to:
+        return redirect(str(redirect_to))
+
+    return TemplateResponse(
+        request,
+        'payment.html',
+        {'form': form, 'payment': payment}
+    )
+
+
 # header_setup()
 # menu_setup()
 # add_image_url_for_all()
-# add_image_url("Chicken w. Cashew Nuts")
-# add_image_url("Brown Rice")
-# add_image_url("Steamed Rice")
+add_image_url("General Tso's Chicken")
+add_image_url("Hunan Beef")
+add_image_url("Beef w. Mushrooms")
+add_image_url("Sweet & Sour Chicken")
+add_image_url("Shrimp w. Broccoli")

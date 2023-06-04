@@ -24,3 +24,7 @@ whitenoise
 
 # for media files
 Pillow
+
+# for payments
+django-payments
+"django-payments[stripe]"

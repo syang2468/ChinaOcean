@@ -31,6 +31,8 @@ urlpatterns = [
     path('menu/edit', edit_menu, name="edit"),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view(), name='logout'),
+    # path('payment/<int:payment_id>', views.payment_details, name='payment'),
+    path('payments/', include('payments.urls')),
     # path('other/', other, name="other")
 ]
 

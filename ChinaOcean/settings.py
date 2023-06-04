@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "django_nose",
+    "payments"
 ]
 
 MIDDLEWARE = [
@@ -192,3 +193,17 @@ NOSE_ARGS = [
     '--cover-html',
     '--cover-min-percentage=70',
 ]
+
+# This can be a string or callable, and should return a base host that
+# will be used when receiving callbacks and notifications from payment
+# providers.
+#
+# Keep in mind that if you use `localhost`, external servers won't be
+# able to reach you for webhook notifications.
+PAYMENT_HOST = ['localhost:8000', 'china-ocean.herokuapp.com']
+
+# Whether to use TLS (HTTPS). If false, will use plain-text HTTP.
+# Defaults to ``not settings.DEBUG``.
+PAYMENT_USES_SSL = True
+
+# PAYMENT_MODEL = 'mypaymentapp.models.Payment'
