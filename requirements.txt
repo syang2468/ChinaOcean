@@ -26,5 +26,5 @@ whitenoise
 Pillow
 
 # for payments
-django-payments
-"django-payments[stripe]"
+# django-payments
+# "django-payments[stripe]"
