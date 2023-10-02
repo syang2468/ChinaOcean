@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "django_nose",
-    "payments"
+    # "payments"
 ]
 
 MIDDLEWARE = [
@@ -206,7 +206,7 @@ NOSE_ARGS = [
 #
 # Keep in mind that if you use `localhost`, external servers won't be
 # able to reach you for webhook notifications.
-PAYMENT_HOST = ['localhost:8000', 'china-ocean.herokuapp.com']
+# PAYMENT_HOST = ['localhost:8000', 'china-ocean.herokuapp.com']
 
 # Whether to use TLS (HTTPS). If false, will use plain-text HTTP.
 # Defaults to ``not settings.DEBUG``.

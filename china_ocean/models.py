@@ -3,7 +3,7 @@ from django.db import models
 from decimal import Decimal
 
 # from payments import PurchasedItem
-# from payments.models import BasePayment
+# from payments.models import Base
 
 
 class Header(models.Model):
