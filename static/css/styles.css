@@ -67,22 +67,19 @@ html, body {
     /* animation: animate .5s linear infinite; */
 }
 
-/* allows 2 divs to be side by side */
-.wrapper {
-    width: 100%;
-    overflow: hidden;
+.menu-container {
+    max-width: unset;
 }
 
 /* side bar for menu headers */
 .menu-sidebar {
-    min-height: 750px;
     position: sticky;
-    overflow-x: hidden;
-    background-color: #7bbef6;
-    max-width: 20%;
-    /* padding-right: 10px; */
+    /* background-color: #7bbef6; */
     float: left;
-    display:flex;
+    padding-top: 20px;
+    border-right-color: #333;
+    border-right-width: 2px;
+    border-right-style: solid;
 }
 
 .menu-sidebar a {
@@ -102,7 +99,7 @@ html, body {
 
 /* Styling for whole menu content */
 .menu {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
     float: left;
 }

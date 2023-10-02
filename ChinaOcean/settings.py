@@ -28,8 +28,9 @@ SECRET_KEY = "django-insecure-mffoz&s%t^m+ezu#7$*$wccn5kvi85w4fgz+k&de@-%vcoefw=
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "china-ocean.herokuapp.com", "www.chinaocean.com"] #, "cs-3240-my-study-buddy.herokuapp.com"]
 
-DEV_HOSTS = ['Sofias-MacBook-Pro.local']
+DEV_HOSTS = ['Sofias-MacBook-Pro.local', 'Sofias-MBP']
 
+# print("RABBIT", gethostname())
 
 if gethostname() not in DEV_HOSTS and not re.match('^fv-az..', gethostname()):
     # Source: https://stackoverflow.com/questions/49753687/redirect-http-to-https-safely-for-heroku-app
@@ -37,7 +38,12 @@ if gethostname() not in DEV_HOSTS and not re.match('^fv-az..', gethostname()):
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     DEBUG = False
 else:
+    # SECURE_SSL_REDIRECT = False
     DEBUG = True
+    HOST_SCHEME                     = "http://"
+
+
+
 
 # Application definition
 
@@ -204,6 +210,15 @@ PAYMENT_HOST = ['localhost:8000', 'china-ocean.herokuapp.com']
 
 # Whether to use TLS (HTTPS). If false, will use plain-text HTTP.
 # Defaults to ``not settings.DEBUG``.
-PAYMENT_USES_SSL = True
+# PAYMENT_USES_SSL = True
 
 # PAYMENT_MODEL = 'mypaymentapp.models.Payment'
+
+# CORS_REPLACE_HTTPS_REFERER      = False
+# SECURE_PROXY_SSL_HEADER         = None
+# SECURE_SSL_REDIRECT             = False
+# SESSION_COOKIE_SECURE           = False
+# CSRF_COOKIE_SECURE              = False
+# SECURE_HSTS_SECONDS             = None
+# SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
+# SECURE_FRAME_DENY               = False
